@@ -7,254 +7,498 @@
 		<meta name="description" content="Abhijit Prasad's portfolio - Software Engineer specializing in Java, Spring Boot, and enterprise applications">
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+		<link rel="icon" type="image/png" href="images/ap.png">
+		<style>
+			/* Custom Styles */
+			.icon.brands {
+				opacity: 0.7;
+				transition: opacity 0.2s ease-in-out, filter 0.2s ease-in-out;
+			}
+			.icon.brands:hover {
+				opacity: 1;
+				filter: brightness(1.2);
+			}
+			.icon.brands img {
+				opacity: 0.7;
+				transition: opacity 0.2s ease-in-out, filter 0.2s ease-in-out;
+			}
+			.icon.brands:hover img {
+				opacity: 1;
+				filter: brightness(1.2);
+			}
+			.hackerrank-icon {
+				position: relative;
+				top: 3.5px;
+			}
+			.skill-bar {
+				width: 100%;
+				background-color: #e0e0e0;
+				border-radius: 5px;
+				margin: 10px 0;
+			}
+			.skill-level {
+				height: 10px;
+				background-color: #4CAF50;
+				border-radius: 5px;
+				text-align: right;
+				padding-right: 5px;
+				color: white;
+				font-size: 12px;
+			}
+			.dark-mode {
+				background-color: #121212;
+				color: #ffffff;
+			}
+			.dark-mode .skill-bar {
+				background-color: #333;
+			}
+			.dark-mode .skill-level {
+				background-color: #1e90ff;
+			}
+			.dark-mode-toggle {
+				position: fixed;
+				top: 20px;
+				right: 20px;
+				z-index: 1000;
+				cursor: pointer;
+			}
+
+/* Updated Skills Section Styles */
+/* Updated Skills Section Styles */
+.skills-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .skill-category {
+            background: linear-gradient(135deg, #2c3e50, #34495e);
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .skill-category:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+        }
+
+        .skill-category h3 {
+            font-size: 1.5rem;
+            color: #fff;
+            margin-bottom: 15px;
+            text-align: center;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+        }
+
+        .skill-card {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 15px;
+            text-align: center;
+            margin-bottom: 10px;
+            opacity: 0;
+            transform: translateY(-100%);
+            transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            will-change: transform, opacity;
+        }
+
+        .skill-card.animate {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .skill-card:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-5px);
+        }
+
+        .skill-icon {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            color: #3498db;
+        }
+
+        .skill-name {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #fff;
+        }
+
+        /* Vibrant Colors for Categories */
+        .skill-category.languages {
+            background: linear-gradient(135deg, #e74c3c, #c0392b);
+        }
+
+        .skill-category.cloud {
+            background: linear-gradient(135deg, #3498db, #2980b9);
+        }
+
+        .skill-category.frontend {
+            background: linear-gradient(135deg, #9b59b6, #8e44ad);
+        }
+
+        .skill-category.database {
+            background: linear-gradient(135deg, #1abc9c, #16a085);
+        }
+
+		</style>
 	</head>
 	<body class="is-preload">
 
+		<!-- Dark Mode Toggle -->
+		<div class="dark-mode-toggle" onclick="toggleDarkMode()">
+			<i class="fas fa-moon"></i>
+		</div>
+
 		<!-- Header -->
-			<div id="header">
-				<div class="top">
-					<!-- Logo -->
-						<div id="logo">
-							<span class="image avatar48"><img src="images/avatar.jpg" alt="Abhijit Prasad" /></span>
-							<h1 id="title">Abhijit Prasad</h1>
-							<p>Software Engineer (SDE-II)</p>
-							<p> at JP Morgan Chase</p>
-						</div>
-
-					<!-- Nav -->
-						<nav id="nav">
-							<ul>
-								<li><a href="#top" id="top-link"><span class="icon solid fa-home">Intro</span></a></li>
-								<li><a href="#experience" id="experience-link"><span class="icon solid fa-briefcase">Experience</span></a></li>
-								<li><a href="#skills" id="skills-link"><span class="icon solid fa-cogs">Skills</span></a></li>
-								<li><a href="#portfolio" id="portfolio-link"><span class="icon solid fa-th">Projects</span></a></li>
-								<li><a href="#certifications" id="certifications-link"><span class="icon solid fa-certificate">Certifications</span></a></li>
-								<li><a href="#achievements" id="achievements-link"><span class="icon solid fa-trophy">Achievements</span></a></li>
-								<li><a href="#about" id="about-link"><span class="icon solid fa-user">About Me</span></a></li>
-								<li><a href="#contact" id="contact-link"><span class="icon solid fa-envelope">Contact</span></a></li>
-							</ul>
-						</nav>
+		<div id="header">
+			<div class="top">
+				<!-- Logo -->
+				<div id="logo">
+					<span class="image avatar48"><img src="images/abhijit.jpeg" alt="Abhijit Prasad" /></span>
+					<h1 id="title">Abhijit Prasad</h1>
+					<p>Software Engineer (SDE-II)</p>
+					<p> at JP Morgan Chase</p>
+					<p class="tagline">Building Scalable Applications for the Financial World</p>
 				</div>
 
-				<div class="bottom">
-					<!-- Social Icons -->
-						<ul class="icons">
-							<li><a href="https://www.linkedin.com/in/abhijitprasad" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
-							<li><a href="https://github.com/planetabhijit" class="icon brands fa-github"><span class="label">Github</span></a></li>
-							<li><a href="https://leetcode.com/planetabhijit" class="icon brands fa-user"><img src="images/leetcode.webp" alt="LeetCode" style="width:24px;height:16px;"><span class="label">LeetCode</span></a></li>
-							<li><a href="https://www.hackerrank.com/abhijitprasadra1" class="icon brands fa-code"><img src="images/hackerrank.png" alt="HackerRank" style="width:35px;height:20px;"><span class="label">HackerRank</span></a></li>					
-						</ul>
-				</div>
+				<!-- Nav -->
+				<nav id="nav">
+					<ul>
+						<li><a href="#top" id="top-link"><span class="icon solid fa-home">Intro</span></a></li>
+						<li><a href="#experience" id="experience-link"><span class="icon solid fa-briefcase">Experience</span></a></li>
+						<li><a href="#skills" id="skills-link"><span class="icon solid fa-cogs">Skills</span></a></li>
+						<li><a href="#portfolio" id="portfolio-link"><span class="icon solid fa-th">Projects</span></a></li>
+						<li><a href="#certifications" id="certifications-link"><span class="icon solid fa-certificate">Certifications</span></a></li>
+						<li><a href="#achievements" id="achievements-link"><span class="icon solid fa-trophy">Achievements</span></a></li>
+						<li><a href="#about" id="about-link"><span class="icon solid fa-user">About Me</span></a></li>
+						<li><a href="#contact" id="contact-link"><span class="icon solid fa-envelope">Contact</span></a></li>
+					</ul>
+				</nav>
 			</div>
+
+			<div class="bottom">
+				<!-- Social Icons -->
+				<ul class="icons">
+					<li><a href="https://www.linkedin.com/in/abhijitprasad" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+					<li><a href="https://github.com/planetabhijit" class="icon brands fa-github"><span class="label">Github</span></a></li>
+					<li><a href="https://leetcode.com/planetabhijit" class="icon brands fa-user"><img src="images/leetcode.webp" alt="LeetCode" style="width:24px;height:20px;"><span class="label">LeetCode</span></a></li>
+					<li><a href="https://www.hackerrank.com/abhijitprasadra1" class="icon brands fa-code"><img src="images/hackerrank.png" alt="HackerRank" style="width:39px;height:23px;" class="hackerrank-icon"><span class="label">HackerRank</span></a></li>
+				</ul>
+			</div>
+		</div>
 
 		<!-- Main -->
-			<div id="main">
+		<div id="main">
 
-				<!-- Intro -->
-					<section id="top" class="one dark cover">
-						<div class="container">
-							<header>
-								<h2 class="alt">Welcome! I'm <strong>Abhijit Prasad</strong></h2>
-								<p>Software Engineer at JP Morgan Chase, specializing in CIB Revenue Management Technology.<br />
-								Transforming complex challenges into efficient, scalable solutions with expertise in Java, Spring Boot, and cloud technologies.</p>
-							</header>
-							<footer>
-								<a href="#experience" class="button scrolly">Explore My Experience</a>
-							</footer>
+			<!-- Intro -->
+			<section id="top" class="one dark cover">
+				<div class="container">
+					<header>
+						<h2 class="alt animate__animated animate__fadeIn">Welcome! I'm <strong>Abhijit Prasad</strong></h2>
+						<p class="animate__animated animate__fadeInUp">Software Engineer at JP Morgan Chase & Co.<br />
+						Transforming complex challenges into efficient, scalable solutions with expertise in Java, Spring Boot, and cloud technologies.</p>
+					</header>
+					<footer>
+						<a href="#experience" class="button scrolly animate__animated animate__fadeInUp">Explore My Experience</a>
+						<a href="path/to/your/resume.pdf" class="button scrolly animate__animated animate__fadeInUp" download>Download Resume</a>
+					</footer>
+				</div>
+			</section>
+
+			<!-- Experience -->
+			<section id="experience" class="two">
+				<div class="container">
+					<header>
+						<h2>Professional Experience</h2>
+					</header>
+					<div class="experience-item animate__animated animate__fadeInLeft">
+						<h3>Software Engineer (SDE-II)</h3>
+						<ul>
+							<li>Developed and maintained critical applications, improving performance by 30% through optimization techniques.</li>
+							<li>Leveraged Java, Spring Boot, and cloud technologies to create scalable solutions.</li>
+							<li>Collaborated with cross-functional teams to drive innovation in financial technology.</li>
+						</ul>
+					</div>
+				</div>
+			</section>
+
+			<!-- Skills Section -->
+			<section id="skills" class="three">
+				<div class="container">
+					<header>
+						<h2>Technical Skills</h2>
+					</header>
+					<div class="skills-container">
+						<!-- Programming Languages -->
+						<div class="skill-card">
+							<i class="fab fa-java skill-icon"></i>
+							<div class="skill-name">Java</div>
 						</div>
-					</section>
-
-				<!-- Experience -->
-					<section id="experience" class="two">
-						<div class="container">
-							<header>
-								<h2>Professional Experience</h2>
-							</header>
-							<div class="experience-item">
-								<h3>Software Engineer II</h3>
-								<h4>JP Morgan Chase | CIB Revenue Management Technology </h4>
-								<ul>
-									<li>Developing and maintaining critical systems for CIB Revenue Management.</li>
-									<li>Leveraging Java, Spring Boot, and cloud technologies to create scalable solutions.</li>
-									<li>Collaborating with cross-functional teams to drive innovation in financial technology.</li>
-								</ul>
-							</div>
-							<!-- <div class="experience-item">
-								<h3>Sr Software Developer</h3>
-								<h4>Datamatics | Oct 2022 - Prior to JP Morgan Chase</h4>
-								<ul>
-									<li>Led development of foreign exchange application for Axis Bank, enhancing operational efficiency.</li>
-									<li>Developed robust Spring Boot applications deployed across 1500+ branches.</li>
-									<li>Implemented critical features including report file uploading/downloading and UI enhancements.</li>
-								</ul>
-							</div>
-							<div class="experience-item">
-								<h3>Associate Software Developer</h3>
-								<h4>CS Infocomm Pvt Ltd | Feb 2020 - Oct 2022</h4>
-								<ul>
-									<li>Developed advanced IVR application for SBI, serving 45,000+ daily users in India and abroad.</li>
-									<li>Integrated IVR code with core banking systems using web services and REST APIs.</li>
-								</ul>
-							</div> -->
+						<div class="skill-card">
+							<i class="fab fa-python skill-icon"></i>
+							<div class="skill-name">Python</div>
 						</div>
-					</section>
-
-				<!-- Skills -->
-					<section id="skills" class="three">
-						<div class="container">
-							<header>
-								<h2>Technical Skills</h2>
-							</header>
-							<div class="row">
-								<div class="col-6 col-12-mobile">
-									<h3>Programming Languages & Frameworks</h3>
-									<ul>
-										<li>Java (Core Java, Java 8)</li>
-										<li>Spring Framework (Spring Boot, Spring MVC)</li>
-										<li>Hibernate</li>
-										<li>HTML5, CSS3, JavaScript</li>
-									</ul>
-								</div>
-								<div class="col-6 col-12-mobile">
-									<h3>Tools & Technologies</h3>
-									<ul>
-										<li>Web Services (RESTful, SOAP, JSON)</li>
-										<li>Databases: Oracle SQL, MS SQL Server, MySQL</li>
-										<li>Servers: WebLogic, Tomcat, IBM WebSphere</li>
-										<li>Version Control: Git, SVN, SourceTree</li>
-										<li>CI/CD & Agile Methodologies</li>
-										<li>Cloud Technologies & Terraform</li>
-									</ul>
-								</div>
-							</div>
+						<div class="skill-card">
+							<i class="fab fa-js skill-icon"></i>
+							<div class="skill-name">JavaScript</div>
 						</div>
-					</section>
+		
+						<!-- Frameworks -->
+						<div class="skill-card">
+							<i class="fas fa-leaf skill-icon"></i>
+							<div class="skill-name">Spring Boot</div>
+						</div>
+						<div class="skill-card">
+							<i class="fab fa-react skill-icon"></i>
+							<div class="skill-name">React</div>
+						</div>
+		
+						<!-- Databases -->
+						<div class="skill-card">
+							<i class="fas fa-database skill-icon"></i>
+							<div class="skill-name">SQL</div>
+						</div>
+		
+						<!-- DevOps -->
+						<div class="skill-card">
+							<i class="fab fa-aws skill-icon"></i>
+							<div class="skill-name">AWS</div>
+						</div>
+						<div class="skill-card">
+							<i class="fab fa-docker skill-icon"></i>
+							<div class="skill-name">Docker</div>
+						</div>
+						<div class="skill-card">
+							<i class="fas fa-code skill-icon"></i>
+							<div class="skill-name">Terraform</div>
+						</div>
+					</div>
+				</div>
+			</section>
 
-				<!-- Portfolio -->
-					<section id="portfolio" class="four">
-						<div class="container">
-							<header>
-								<h2>Key Projects</h2>
-							</header>
-							<p>Highlighting some of my significant contributions in software development:</p>
-							<div class="row">
-								<div class="col-4 col-12-mobile">
-									<article class="item">
-										<a href="#" class="image fit"><img src="images/project1.jpg" alt="CIB Revenue Management" /></a>
-										<header>
-											<h3>CIB Revenue Management System</h3>
-										</header>
-									</article>
-								</div>
-								<div class="col-4 col-12-mobile">
-									<article class="item">
-										<a href="#" class="image fit"><img src="images/project2.jpg" alt="Forex Application" /></a>
-										<header>
-											<h3>Axis Bank Forex Application</h3>
-										</header>
-									</article>
-								</div>
-								<div class="col-4 col-12-mobile">
-									<article class="item">
-										<a href="#" class="image fit"><img src="images/project3.jpg" alt="IVR System" /></a>
-										<header>
-											<h3>SBI IVR System</h3>
-										</header>
-									</article>
-								</div>
+			<!-- Portfolio -->
+			<!-- Skills Section -->
+			<section id="skills" class="three">
+				<div class="container">
+					<header>
+						<h2>Technical Skills</h2>
+					</header>
+					<div class="skills-container">
+						<!-- Languages -->
+						<div class="skill-category languages">
+							<h3>Languages</h3>
+							<div class="skill-card">
+								<i class="fab fa-java skill-icon"></i>
+								<div class="skill-name">Java</div>
+							</div>
+							<div class="skill-card">
+								<i class="fab fa-python skill-icon"></i>
+								<div class="skill-name">Python</div>
+							</div>
+							<div class="skill-card">
+								<i class="fab fa-js skill-icon"></i>
+								<div class="skill-name">JavaScript</div>
 							</div>
 						</div>
-					</section>
-
-				<!-- Certifications -->
-					<section id="certifications" class="five">
-						<div class="container">
-							<header>
-								<h2>Certifications</h2>
-							</header>
-							<div class="row">
-								<div class="col-6 col-12-mobile">
-									<h3>HashiCorp Certified: Terraform Associate (003)</h3>
-									<p>Verified certification demonstrating expertise in infrastructure as code and cloud provisioning.</p>
-									<a href="https://www.credly.com/badges/0e565f4e-3fff-4f79-93c4-346c59e9efe6" target="_blank" class="button">Show Certification</a>
-								</div>
-								<div class="col-6 col-12-mobile">
-									<h3>Other Certifications</h3>
-									<ul>
-										<li>HackerRank: Java Program (Certificate No: D31D0E4DD862)</li>
-										<li>IBM Technical Training: Python and IoT (Certificate No: IBM19400000002)</li>
-										<li>Java Course Certification (Certificate No: 3444251)</li>
-									</ul>
-								</div>
+		
+						<!-- Cloud -->
+						<div class="skill-category cloud">
+							<h3>Cloud & DevOps</h3>
+							<div class="skill-card">
+								<i class="fab fa-aws skill-icon"></i>
+								<div class="skill-name">AWS</div>
+							</div>
+							<div class="skill-card">
+								<i class="fab fa-docker skill-icon"></i>
+								<div class="skill-name">Docker</div>
+							</div>
+							<div class="skill-card">
+								<i class="fas fa-code skill-icon"></i>
+								<div class="skill-name">Terraform</div>
 							</div>
 						</div>
-					</section>
-
-				<!-- Achievements -->
-					<section id="achievements" class="six">
-						<div class="container">
-							<header>
-								<h2>Achievements & Recognition</h2>
-							</header>
-							<ul>
-								<li>InternShala Student Partner (ISP-2019)</li>
-								<li>Campus Ambassador, International Organization of Software Developers (2018-2019)</li>
-							</ul>
+		
+						<!-- Frontend -->
+						<div class="skill-category frontend">
+							<h3>Frontend</h3>
+							<div class="skill-card">
+								<i class="fab fa-react skill-icon"></i>
+								<div class="skill-name">React</div>
+							</div>
+							<div class="skill-card">
+								<i class="fab fa-html5 skill-icon"></i>
+								<div class="skill-name">HTML5</div>
+							</div>
+							<div class="skill-card">
+								<i class="fab fa-css3-alt skill-icon"></i>
+								<div class="skill-name">CSS3</div>
+							</div>
 						</div>
-					</section>
-
-				<!-- About Me -->
-					<section id="about" class="seven">
-						<div class="container">
-							<header>
-								<h2>About Me</h2>
-							</header>
-							<a href="#" class="image featured"><img src="images/about_me.jpg" alt="Abhijit Prasad" /></a>
-							<p>As a Software Engineer at JP Morgan Chase, I bring a wealth of experience in developing robust, scalable solutions for complex financial systems. My journey in software development has been marked by a consistent drive for innovation and excellence, from creating advanced IVR systems to developing critical foreign exchange applications.</p>
-							<p>With a strong foundation in Java and related technologies, coupled with my recent focus on cloud technologies and infrastructure as code (Terraform), I'm passionate about leveraging cutting-edge tools to solve intricate business problems in the financial technology sector.</p>
-							<p>My diverse experiences across BFSI and E-commerce domains have honed my ability to adapt quickly to new challenges and deliver high-impact projects. When I'm not coding, I enjoy staying updated with the latest trends in tech and contributing to the developer community, always eager to learn and share knowledge with peers.</p>
+		
+						<!-- Databases -->
+						<div class="skill-category database">
+							<h3>Databases</h3>
+							<div class="skill-card">
+								<i class="fas fa-database skill-icon"></i>
+								<div class="skill-name">SQL</div>
+							</div>
+							<div class="skill-card">
+								<i class="fas fa-database skill-icon"></i>
+								<div class="skill-name">MySQL</div>
+							</div>
+							<div class="skill-card">
+								<i class="fas fa-database skill-icon"></i>
+								<div class="skill-name">Oracle</div>
+							</div>
 						</div>
-					</section>
+					</div>
+				</div>
+			</section>
 
-				<!-- Contact -->
-					<section id="contact" class="eight">
-						<div class="container">
-							<header>
-								<h2>Get in Touch</h2>
-							</header>
-							<p>I'm always open to discussing new projects, innovative ideas, or opportunities to contribute to groundbreaking financial technology solutions. Feel free to reach out!</p>
-							<form method="post" action="https://formspree.io/f/mnnaqyjy">
-								<div class="row">
-									<div class="col-6 col-12-mobile"><input type="text" name="name" placeholder="Name" required /></div>
-									<div class="col-6 col-12-mobile"><input type="email" name="email" placeholder="Email" required /></div>
-									<div class="col-12">
-										<textarea name="message" placeholder="Message" required></textarea>
-									</div>
-									<div class="col-12">
-										<input type="submit" value="Send Message" />
-									</div>
-								</div>
-							</form>
+			<!-- Certifications -->
+			<section id="certifications" class="five">
+				<div class="container">
+					<header>
+						<h2>Certifications</h2>
+					</header>
+					<div class="row">
+						<div class="col-6 col-12-mobile">
+							<h3>HashiCorp Certified: Terraform Associate (003)</h3>
+							<p>Verified certification demonstrating expertise in infrastructure as code and cloud provisioning.</p>
+							<a href="https://www.credly.com/badges/0e565f4e-3fff-4f79-93c4-346c59e9efe6" target="_blank" class="button">Show Certification</a>
 						</div>
-					</section>
-			</div>
+						<div class="col-6 col-12-mobile">
+							<h3>Amazon Certified: AWS Cloud Practitioner (CLF-C02)</h3>
+							<p>Verified certification demonstrating expertise in AWS cloud technologies.</p>
+							<a href="https://www.credly.com/earner/earned/badge/d69c3e8b-7309-44b4-8177-a592cf05296b" target="_blank" class="button">Show Certification</a>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- Achievements -->
+			<section id="achievements" class="six">
+				<div class="container">
+					<header>
+						<h2>Achievements & Recognition</h2>
+					</header>
+					<ul>
+						<li>InternShala Student Partner (ISP-2019)</li>
+						<li>Campus Ambassador, International Organization of Software Developers (2018-2019)</li>
+					</ul>
+				</div>
+			</section>
+
+			<!-- About Me -->
+			<section id="about" class="seven">
+				<div class="container">
+					<header>
+						<h2>About Me</h2>
+					</header>
+					<a href="#" class="image featured"><img src="images/about_me.jpg" alt="Abhijit Prasad" /></a>
+					<p>As a Software Engineer, I bring a wealth of experience in developing robust, scalable solutions for complex financial systems. My journey in software development has been marked by a consistent drive for innovation and excellence, from creating advanced IVR systems to developing critical foreign exchange applications.</p>
+					<p>With a strong foundation in Java and related technologies, coupled with my recent focus on cloud technologies and infrastructure as code (Terraform), I'm passionate about leveraging cutting-edge tools to solve intricate business problems in the financial technology sector.</p>
+					<p>My diverse experiences across BFSI and E-commerce domains have honed my ability to adapt quickly to new challenges and deliver high-impact projects. When I'm not coding, I enjoy staying updated with the latest trends in tech and contributing to the developer community, always eager to learn and share knowledge with peers.</p>
+				</div>
+			</section>
+
+			<!-- Contact -->
+			<section id="contact" class="eight">
+				<div class="container">
+					<header>
+						<h2>Get in Touch</h2>
+					</header>
+					<p>I'm always open to discussing new projects, innovative ideas, or opportunities to contribute to groundbreaking technology solutions. Feel free to reach out!</p>
+					<form method="post" action="https://formspree.io/f/mnnaqyjy">
+						<div class="row">
+							<div class="col-6 col-12-mobile"><input type="text" name="name" placeholder="Name" required /></div>
+							<div class="col-6 col-12-mobile"><input type="email" name="email" placeholder="Email" required /></div>
+							<div class="col-12">
+								<textarea name="message" placeholder="Message" required></textarea>
+							</div>
+							<div class="col-12">
+								<input type="submit" value="Send Message" />
+							</div>
+						</div>
+					</form>
+				</div>
+			</section>
+		</div>
 
 		<!-- Footer -->
-			<div id="footer">
-				<!-- Copyright -->
-					<ul class="copyright">
-						<li>&copy; 2024 Abhijit Prasad. All rights reserved.</li>
-					</ul>
-			</div>
+		<div id="footer">
+			<!-- Copyright -->
+			<ul class="copyright">
+				<li>&copy; 2024 Abhijit Prasad. All rights reserved.</li>
+			</ul>
+		</div>
 
 		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/jquery.scrolly.min.js"></script>
+		<script src="assets/js/jquery.scrollex.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
+		<script>
+			// Dark Mode Toggle
+			function toggleDarkMode() {
+				document.body.classList.toggle('dark-mode');
+				const icon = document.querySelector('.dark-mode-toggle i');
+				if (document.body.classList.contains('dark-mode')) {
+					icon.classList.remove('fa-moon');
+					icon.classList.add('fa-sun');
+				} else {
+					icon.classList.remove('fa-sun');
+					icon.classList.add('fa-moon');
+				}
+			}
+		</script>
+		<!-- Scripts -->
+		<script>
+			// Skill Animation Trigger
+			const skillsObserver = new IntersectionObserver((entries) => {
+				entries.forEach(entry => {
+					if (entry.isIntersecting) {
+						const skillCards = document.querySelectorAll('.skill-card');
+						skillCards.forEach((card, index) => {
+							setTimeout(() => {
+								card.classList.add('animate');
+							}, index * 100); // Stagger animation
+						});
+					}
+				});
+			}, { threshold: 0.5 });
+	
+			skillsObserver.observe(document.querySelector('#skills'));
+		</script>
+
+		<!-- <script>
+        // Skill Animation Trigger
+        const skillsObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const skillCards = document.querySelectorAll('.skill-card');
+                    skillCards.forEach((card, index) => {
+                        setTimeout(() => {
+                            card.classList.add('animate');
+                        }, index * 100); // Stagger animation
+                    });
+                }
+            });
+        }, { threshold: 0.5 });
+
+        skillsObserver.observe(document.querySelector('#skills'));
+    	</script> -->
+	
 
 	</body>
 </html>
