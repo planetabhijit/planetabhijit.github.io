@@ -65,99 +65,128 @@
 			}
 
 /* Updated Skills Section Styles */
-/* Updated Skills Section Styles */
-.skills-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
-            padding: 20px;
-        }
+			.skills-container {
+				display: grid;
+				grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+				gap: 20px;
+				padding: 20px;
+        	}
 
-        .skill-category {
-            background: linear-gradient(135deg, #2c3e50, #34495e);
-            border-radius: 15px;
-            padding: 20px;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
+			.skill-category {
+				background: linear-gradient(135deg, #2c3e50, #34495e);
+				border-radius: 15px;
+				padding: 20px;
+				box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+				transition: transform 0.3s ease, box-shadow 0.3s ease;
+			}
 
-        .skill-category:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
-        }
+			.skill-category:hover {
+				transform: translateY(-10px);
+				box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+			}
 
-        .skill-category h3 {
-            font-size: 1.5rem;
-            color: #fff;
-            margin-bottom: 15px;
-            text-align: center;
-            border-bottom: 2px solid #3498db;
-            padding-bottom: 10px;
-        }
+			.skill-category h3 {
+				font-size: 1.5rem;
+				color: #fff;
+				margin-bottom: 15px;
+				text-align: center;
+				border-bottom: 2px solid #3498db;
+				padding-bottom: 10px;
+			}
 
-        .skill-card {
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 10px;
-            padding: 15px;
-            text-align: center;
-            margin-bottom: 10px;
-            opacity: 0;
-            transform: translateY(-100%);
-            transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            will-change: transform, opacity;
-        }
+			.skill-card {
+				background: rgba(255, 255, 255, 0.1);
+				border-radius: 10px;
+				padding: 15px;
+				text-align: center;
+				margin-bottom: 10px;
+				opacity: 0;
+				transform: translateY(-100%);
+				transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+				box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+				will-change: transform, opacity;
+			}
 
-        .skill-card.animate {
-            opacity: 1;
-            transform: translateY(0);
-        }
+			.skill-card.animate {
+				opacity: 1;
+				transform: translateY(0);
+			}
 
-        .skill-card:hover {
-            background: rgba(255, 255, 255, 0.2);
-            transform: translateY(-5px);
-        }
+			.skill-card:hover {
+				background: rgba(255, 255, 255, 0.2);
+				transform: translateY(-5px);
+			}
 
-        .skill-icon {
-            font-size: 2.5rem;
-            margin-bottom: 10px;
-            color: #3498db;
-        }
+			.skill-icon {
+				font-size: 2.5rem;
+				margin-bottom: 10px;
+				color: #3498db;
+			}
 
-        .skill-name {
-            font-size: 1.1rem;
-            font-weight: 600;
-            color: #fff;
-        }
+			.skill-name {
+				font-size: 1.1rem;
+				font-weight: 600;
+				color: #121212;
+			}
 
-        /* Vibrant Colors for Categories */
-        .skill-category.languages {
-            background: linear-gradient(135deg, #e74c3c, #c0392b);
-        }
+			/* Vibrant Colors for Categories */
+			.skill-category.languages {
+				background: linear-gradient(135deg, #d2d5c5, #d2d5c5);
+			}
 
-        .skill-category.cloud {
-            background: linear-gradient(135deg, #3498db, #2980b9);
-        }
+			.skill-category.cloud {
+				background: linear-gradient(135deg, #d2d5c5, #d2d5c5);
+			}
 
-        .skill-category.frontend {
-            background: linear-gradient(135deg, #9b59b6, #8e44ad);
-        }
+			.skill-category.frontend {
+				background: linear-gradient(135deg, #d2d5c5, #d2d5c5);
+			}
 
-        .skill-category.database {
-            background: linear-gradient(135deg, #1abc9c, #16a085);
-        }
+			.skill-category.database {
+				background: linear-gradient(135deg, #d2d5c5, #d2d5c5);
+			}
 
-		/* Button Spacing */
-		footer {
-			display: flex;
-			gap: 100px; /* Adds space between buttons */
-			justify-content: center; /* Centers the buttons */
-			flex-wrap: wrap; /* Ensures buttons wrap on smaller screens */
-		}
+			.skill-image {
+				width: 60px; /* Adjust based on your image size */
+				height: 60px;
+				object-fit: contain;
+				margin-bottom: 10px;
+				transition: transform 0.3s ease;
+				filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+			}
 
-		footer .button {
-			margin: 10px 0; /* Adds margin for better spacing on smaller screens */
-		}
+			/* Optional: Add hover effect to image */
+			.skill-card:hover .skill-image {
+				transform: scale(1.1);
+				filter: drop-shadow(0 4px 8px rgba(0,0,0,0.2));
+			}
+
+			/* Footer Button Spacing */
+			footer {
+				display: flex;
+				gap: 100px; /* Adds space between buttons */
+				justify-content: center; /* Centers the buttons */
+				flex-wrap: wrap; /* Ensures buttons wrap on smaller screens */
+			}
+
+			footer .button {
+				margin: 10px 0; /* Adds margin for better spacing on smaller screens */
+			}
+
+			#header .icons {
+			margin-left: -20px;
+			padding-left: 0;
+			justify-content: flex-start;
+			}
+
+			#header .icons li {
+			margin-right: 15px;
+			}
+
+			.icon.brands {
+			opacity: 0.7;
+			transition: opacity 0.2s ease-in-out, filter 0.2s ease-in-out;
+			}
 
 		</style>
 	</head>
@@ -192,18 +221,15 @@
 						<li><a href="#about" id="about-link"><span class="icon solid fa-user">About Me</span></a></li>
 						<li><a href="#contact" id="contact-link"><span class="icon solid fa-envelope">Contact</span></a></li>
 					</ul>
+					<ul class="icons">
+						<li><a href="https://www.linkedin.com/in/abhijitprasad" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+						<li><a href="https://github.com/planetabhijit" class="icon brands fa-github"><span class="label">Github</span></a></li>
+						<li><a href="https://leetcode.com/planetabhijit" class="icon brands fa-user"><img src="images/leetcode.webp" alt="LeetCode" style="width:24px;height:20px;"><span class="label">LeetCode</span></a></li>
+						<li><a href="https://www.hackerrank.com/abhijitprasadra1" class="icon brands fa-code"><img src="images/hackerrank.png" alt="HackerRank" style="width:39px;height:23px;" class="hackerrank-icon"><span class="label">HackerRank</span></a></li>
+					</ul>
 				</nav>
 			</div>
 
-			<div class="bottom">
-				<!-- Social Icons -->
-				<ul class="icons">
-					<li><a href="https://www.linkedin.com/in/abhijitprasad" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
-					<li><a href="https://github.com/planetabhijit" class="icon brands fa-github"><span class="label">Github</span></a></li>
-					<li><a href="https://leetcode.com/planetabhijit" class="icon brands fa-user"><img src="images/leetcode.webp" alt="LeetCode" style="width:24px;height:20px;"><span class="label">LeetCode</span></a></li>
-					<li><a href="https://www.hackerrank.com/abhijitprasadra1" class="icon brands fa-code"><img src="images/hackerrank.png" alt="HackerRank" style="width:39px;height:23px;" class="hackerrank-icon"><span class="label">HackerRank</span></a></li>
-				</ul>
-			</div>
 		</div>
 
 		<!-- Main -->
@@ -233,7 +259,7 @@
 					<div class="experience-item animate__animated animate__fadeInLeft">
 						<h3>Software Engineer (SDE-II)</h3>
 						<ul>
-							<li>Developed and maintained critical applications, improving performance by 30% through optimization techniques.</li>
+							<li>Developed and maintained critical applications, improving performance & optimization.</li>
 							<li>Leveraged Java, Spring Boot, and cloud technologies to create scalable solutions.</li>
 							<li>Collaborated with cross-functional teams to drive innovation in financial technology.</li>
 						</ul>
@@ -242,29 +268,28 @@
 			</section>
 
 			<!-- Skills Section -->
-			<section id="skills" class="three">
+			<!-- <section id="skills" class="three">
 				<div class="container">
 					<header>
 						<h2>Technical Skills</h2>
 					</header>
 					<div class="skills-container">
-						<!-- Programming Languages -->
+
 						<div class="skill-card">
-							<i class="fab fa-java skill-icon"></i>
+							<img src="images/java.jpg" class="skill-image" alt="Java">
 							<div class="skill-name">Java</div>
 						</div>
 						<div class="skill-card">
-							<i class="fab fa-python skill-icon"></i>
+							<img src="images/python.jpg" class="skill-image" alt="Java">
 							<div class="skill-name">Python</div>
 						</div>
 						<div class="skill-card">
-							<i class="fab fa-js skill-icon"></i>
+							<img src="images/javascript.png" class="skill-image" alt="Java">
 							<div class="skill-name">JavaScript</div>
 						</div>
 		
-						<!-- Frameworks -->
 						<div class="skill-card">
-							<i class="fas fa-leaf skill-icon"></i>
+							<img src="images/springboot.png" class="skill-image" alt="Java">
 							<div class="skill-name">Spring Boot</div>
 						</div>
 						<div class="skill-card">
@@ -272,13 +297,11 @@
 							<div class="skill-name">React</div>
 						</div>
 		
-						<!-- Databases -->
 						<div class="skill-card">
 							<i class="fas fa-database skill-icon"></i>
 							<div class="skill-name">SQL</div>
 						</div>
 		
-						<!-- DevOps -->
 						<div class="skill-card">
 							<i class="fab fa-aws skill-icon"></i>
 							<div class="skill-name">AWS</div>
@@ -293,7 +316,7 @@
 						</div>
 					</div>
 				</div>
-			</section>
+			</section> -->
 
 			<!-- Portfolio -->
 			<!-- Skills Section -->
@@ -305,17 +328,17 @@
 					<div class="skills-container">
 						<!-- Languages -->
 						<div class="skill-category languages">
-							<h3>Languages</h3>
+							<h3 style="color: #ffffff;">Languages</h3>
 							<div class="skill-card">
-								<i class="fab fa-java skill-icon"></i>
-								<div class="skill-name">Java</div>
+								<img src="images/java.jpg" class="skill-image" alt="Java">
+								<h1 class="skill-name" style="color: black;">Java</h1>
 							</div>
 							<div class="skill-card">
-								<i class="fab fa-python skill-icon"></i>
+							<img src="images/python.jpg" class="skill-image" alt="Java">
 								<div class="skill-name">Python</div>
 							</div>
 							<div class="skill-card">
-								<i class="fab fa-js skill-icon"></i>
+								<img src="images/javascript.png" class="skill-image" alt="Java">
 								<div class="skill-name">JavaScript</div>
 							</div>
 						</div>
@@ -324,7 +347,7 @@
 						<div class="skill-category cloud">
 							<h3>Cloud & DevOps</h3>
 							<div class="skill-card">
-								<i class="fab fa-aws skill-icon"></i>
+								<img src="images/aws.jpg" class="skill-image" alt="Java">
 								<div class="skill-name">AWS</div>
 							</div>
 							<div class="skill-card">
@@ -332,7 +355,7 @@
 								<div class="skill-name">Docker</div>
 							</div>
 							<div class="skill-card">
-								<i class="fas fa-code skill-icon"></i>
+								<img src="images/terraform.png" class="skill-image" alt="Java">
 								<div class="skill-name">Terraform</div>
 							</div>
 						</div>
@@ -345,11 +368,11 @@
 								<div class="skill-name">React</div>
 							</div>
 							<div class="skill-card">
-								<i class="fab fa-html5 skill-icon"></i>
+								<img src="images/html.jpg" class="skill-image" alt="Java">
 								<div class="skill-name">HTML5</div>
 							</div>
 							<div class="skill-card">
-								<i class="fab fa-css3-alt skill-icon"></i>
+								<img src="images/css.jpg" class="skill-image" alt="Java">
 								<div class="skill-name">CSS3</div>
 							</div>
 						</div>
@@ -358,12 +381,12 @@
 						<div class="skill-category database">
 							<h3>Databases</h3>
 							<div class="skill-card">
-								<i class="fas fa-database skill-icon"></i>
+								<img src="images/sql.jpg" class="skill-image" alt="Java">
 								<div class="skill-name">SQL</div>
 							</div>
 							<div class="skill-card">
-								<i class="fas fa-database skill-icon"></i>
-								<div class="skill-name">MySQL</div>
+								<img src="images/mongodb.png" class="skill-image" alt="Java">
+								<div class="skill-name">Mongo DB</div>
 							</div>
 							<div class="skill-card">
 								<i class="fas fa-database skill-icon"></i>
@@ -408,13 +431,29 @@
 				</div>
 			</section>
 
+			<section id="skills" class="three">
+				<div class="container">
+					<header>
+						<h2>Educational Qualification</h2>
+					</header>
+					<div class="skills-container">
+						<!-- Programming Languages -->
+						<div class="skill-card">
+							<img src="images/mu.png" class="skill-image" alt="Java">
+							<div class="skill-name">BE - 2019 | Mumbai University</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+
 			<!-- About Me -->
 			<section id="about" class="seven">
 				<div class="container">
 					<header>
-						<h2>About Me</h2>
+						<h3>About Me</h3>
 					</header>
-					<a href="#" class="image featured"><img src="images/about_me.jpg" alt="Abhijit Prasad" /></a>
+					<!-- <a href="#" class="image featured"><img src="images/about_me.jpg" alt="Abhijit Prasad" /></a> -->
 					<p>As a Software Engineer, I bring a wealth of experience in developing robust, scalable solutions for complex financial systems. My journey in software development has been marked by a consistent drive for innovation and excellence, from creating advanced IVR systems to developing critical foreign exchange applications.</p>
 					<p>With a strong foundation in Java and related technologies, coupled with my recent focus on cloud technologies and infrastructure as code (Terraform), I'm passionate about leveraging cutting-edge tools to solve intricate business problems in the financial technology sector.</p>
 					<p>My diverse experiences across BFSI and E-commerce domains have honed my ability to adapt quickly to new challenges and deliver high-impact projects. When I'm not coding, I enjoy staying updated with the latest trends in tech and contributing to the developer community, always eager to learn and share knowledge with peers.</p>
