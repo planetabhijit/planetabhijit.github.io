@@ -147,6 +147,18 @@
             background: linear-gradient(135deg, #1abc9c, #16a085);
         }
 
+		/* Button Spacing */
+		footer {
+			display: flex;
+			gap: 100px; /* Adds space between buttons */
+			justify-content: center; /* Centers the buttons */
+			flex-wrap: wrap; /* Ensures buttons wrap on smaller screens */
+		}
+
+		footer .button {
+			margin: 10px 0; /* Adds margin for better spacing on smaller screens */
+		}
+
 		</style>
 	</head>
 	<body class="is-preload">
@@ -197,17 +209,17 @@
 		<!-- Main -->
 		<div id="main">
 
-			<!-- Intro -->
+			<!-- Intro Section -->
 			<section id="top" class="one dark cover">
 				<div class="container">
 					<header>
 						<h2 class="alt animate__animated animate__fadeIn">Welcome! I'm <strong>Abhijit Prasad</strong></h2>
-						<p class="animate__animated animate__fadeInUp">Software Engineer at JP Morgan Chase & Co.<br />
+						<p class="animate__animated animate__fadeInUp">Software Engineer at JP Morgan Chase, specializing in CIB Revenue Management Technology.<br />
 						Transforming complex challenges into efficient, scalable solutions with expertise in Java, Spring Boot, and cloud technologies.</p>
 					</header>
 					<footer>
 						<a href="#experience" class="button scrolly animate__animated animate__fadeInUp">Explore My Experience</a>
-						<a href="path/to/your/resume.pdf" class="button scrolly animate__animated animate__fadeInUp" download>Download Resume</a>
+						<a href="/Abhijit_Prasad_Resume.pdf?v=1" class="button scrolly animate__animated animate__fadeInUp" download="Abhijit_Prasad_Resume.pdf">Download Resume</a>
 					</footer>
 				</div>
 			</section>
