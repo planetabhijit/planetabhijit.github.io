@@ -257,6 +257,76 @@
 			transition: opacity 0.2s ease-in-out, filter 0.2s ease-in-out;
 			}
 
+			/* Add to existing styles */
+			#chatbot-toggle {
+			position: fixed;
+			bottom: 30px;
+			right: 30px;
+			width: 60px;
+			height: 60px;
+			border-radius: 50%;
+			background: #1e90ff;
+			color: white;
+			border: none;
+			cursor: pointer;
+			box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+			z-index: 1000;
+			transition: all 0.3s ease;
+			}
+
+			#chatbot-container {
+			position: fixed;
+			bottom: 100px;
+			right: 30px;
+			width: 350px;
+			background: white;
+			border-radius: 15px;
+			box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+			display: none;
+			flex-direction: column;
+			z-index: 1000;
+			}
+
+			.dark-mode #chatbot-container {
+			background: #2c3e50;
+			color: white;
+			}
+
+			#chatbot-header {
+			padding: 15px;
+			background: #1e90ff;
+			color: white;
+			border-radius: 15px 15px 0 0;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			}
+
+			#chatbot-messages {
+			height: 300px;
+			overflow-y: auto;
+			padding: 15px;
+			}
+
+			/* Add to existing styles */
+			/* .loading-screen {
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: #1e90ff;
+			z-index: 9999;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			animation: fadeOut 1s 1s forwards;
+			} */
+
+			/* @keyframes fadeOut {
+			to { opacity: 0; visibility: hidden; }
+			} */
+
 		</style>
 	</head>
 	<body class="is-preload">
@@ -264,6 +334,11 @@
 		<!-- Dark Mode Toggle -->
 		<div class="dark-mode-toggle" onclick="toggleDarkMode()">
 			<i class="fas fa-moon"></i>
+		</div>
+
+		<!-- Loading Screen -->
+		<div class="loading-screen">
+		  <div class="spinner"></div>
 		</div>
 
 		<!-- Header -->
@@ -323,70 +398,24 @@
 			<!-- Experience -->
 			<section id="experience" class="two">
 				<div class="container">
-					<header>
-						<h2>Professional Experience</h2>
-					</header>
-					<div class="experience-item animate__animated animate__fadeInLeft">
+				  <header>
+					<h2>Professional Experience</h2>
+				  </header>
+				  <div class="timeline">
+					<div class="timeline-item animate__animated animate__fadeInLeft">
+					  <!-- <div class="timeline-date">2022-Present</div> -->
+					  <div class="timeline-content">
 						<h3>Software Engineer (SDE-II)</h3>
 						<ul>
-							<li>Developed and maintained critical applications, improving performance & optimization.</li>
-							<li>Leveraged Java, Spring Boot, and cloud technologies to create scalable solutions.</li>
-							<li>Collaborated with cross-functional teams to drive innovation in financial technology.</li>
+						  <li>Developed and maintained critical applications</li>
+						  <li>Leveraged Java, Spring Boot, and cloud technologies</li>
+						  <li>Collaborated with cross-functional teams</li>
 						</ul>
+					  </div>
 					</div>
+				  </div>
 				</div>
-			</section>
-
-			<!-- Skills Section -->
-			<!-- <section id="skills" class="three">
-				<div class="container">
-					<header>
-						<h2>Technical Skills</h2>
-					</header>
-					<div class="skills-container">
-
-						<div class="skill-card">
-							<img src="images/java.jpg" class="skill-image" alt="Java">
-							<div class="skill-name">Java</div>
-						</div>
-						<div class="skill-card">
-							<img src="images/python.jpg" class="skill-image" alt="Java">
-							<div class="skill-name">Python</div>
-						</div>
-						<div class="skill-card">
-							<img src="images/javascript.png" class="skill-image" alt="Java">
-							<div class="skill-name">JavaScript</div>
-						</div>
-		
-						<div class="skill-card">
-							<img src="images/springboot.png" class="skill-image" alt="Java">
-							<div class="skill-name">Spring Boot</div>
-						</div>
-						<div class="skill-card">
-							<i class="fab fa-react skill-icon"></i>
-							<div class="skill-name">React</div>
-						</div>
-		
-						<div class="skill-card">
-							<i class="fas fa-database skill-icon"></i>
-							<div class="skill-name">SQL</div>
-						</div>
-		
-						<div class="skill-card">
-							<i class="fab fa-aws skill-icon"></i>
-							<div class="skill-name">AWS</div>
-						</div>
-						<div class="skill-card">
-							<i class="fab fa-docker skill-icon"></i>
-							<div class="skill-name">Docker</div>
-						</div>
-						<div class="skill-card">
-							<i class="fas fa-code skill-icon"></i>
-							<div class="skill-name">Terraform</div>
-						</div>
-					</div>
-				</div>
-			</section> -->
+			  </section>
 
 			<!-- Portfolio -->
 			<!-- Skills Section -->
@@ -599,6 +628,39 @@
 				<li>&copy; 2024 Abhijit Prasad. All rights reserved.</li>
 			</ul>
 		</div>
+
+		<div id="chatbot-container">
+			<div id="chatbot-header">
+			  <span>Ask Abhijit</span>
+			  <button id="chatbot-close">×</button>
+			</div>
+			<div id="chatbot-messages"></div>
+			<div id="chatbot-input">
+			  <input type="text" placeholder="Type your question..." id="chatbot-query">
+			  <button id="chatbot-send"><i class="fas fa-paper-plane"></i></button>
+			</div>
+		  </div>
+		  <button id="chatbot-toggle" class="animate__animated animate__bounceIn">
+			<i class="fas fa-robot"></i>
+		  </button>
+
+		<script>
+			// Chatbot Logic
+			document.addEventListener('DOMContentLoaded', () => {
+			  const chatbotToggle = document.getElementById('chatbot-toggle');
+			  const chatbotContainer = document.getElementById('chatbot-container');
+			  
+			  chatbotToggle.addEventListener('click', () => {
+				chatbotContainer.style.display = 'flex';
+				chatbotToggle.style.transform = 'scale(0.9)';
+			  });
+			
+			  document.getElementById('chatbot-close').addEventListener('click', () => {
+				chatbotContainer.style.display = 'none';
+				chatbotToggle.style.transform = 'scale(1)';
+			  });
+			});
+		</script>
 
 		<!-- Scripts -->
 		<script src="assets/js/jquery.min.js"></script>
