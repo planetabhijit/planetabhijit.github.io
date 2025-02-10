@@ -64,7 +64,76 @@
 				cursor: pointer;
 			}
 
-/* Updated Skills Section Styles */
+			/* Ading dark mode for other section where it is not wokring*/
+
+			/* Add these dark mode overrides */
+			.dark-mode .skill-category {
+				background: linear-gradient(135deg, #2c3e50, #34495e) !important;
+			}
+
+			.dark-mode .skill-name {
+				color: #ffffff !important;
+			}
+
+			.dark-mode .skill-category h3 {
+				color: #ffffff !important;
+				border-bottom-color: #3498db !important;
+			}
+
+			.dark-mode #education h2 {
+				color: #ffffff !important;
+			}
+
+			.dark-mode .skill-card {
+				background: rgba(255, 255, 255, 0.1) !important;
+			}
+
+			/* Add these new dark mode rules */
+			.dark-mode #experience,
+			.dark-mode #portfolio {
+				background-color: #1a1a1a !important;
+				color: #ffffff !important;
+			}
+
+			.dark-mode .experience-item h3,
+			.dark-mode .item h3 {
+				color: #1e90ff !important;
+			}
+
+			.dark-mode .experience-item ul,
+			.dark-mode .item p {
+				color: #cccccc !important;
+			}
+
+			.dark-mode .container h2 {
+				color: #ffffff !important;
+				border-bottom: 2px solid #1e90ff;
+			}
+
+			.dark-mode .animate__animated {
+				color: inherit !important;
+			}
+
+			/* Add these rules to your dark mode styles */
+			.dark-mode #education .container {
+				background-color: #1a1a1a !important;
+			}
+
+			.dark-mode #education .skill-card {
+				background: rgba(255, 255, 255, 0.1) !important;
+				border: 1px solid rgba(255, 255, 255, 0.1) !important;
+			}
+
+			.dark-mode #education .skill-name {
+				color: #ffffff !important;
+				font-weight: 500 !important;
+			}
+
+			.dark-mode #education .skill-image {
+				filter: brightness(0.8) contrast(1.2);
+			}
+
+			/* Updated Skills Section Styles */
 			.skills-container {
 				display: grid;
 				grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -206,7 +275,7 @@
 					<h1 id="title">Abhijit Prasad</h1>
 					<p>Software Engineer (SDE-II)</p>
 					<p> at JP Morgan Chase</p>
-					<p class="tagline">Building Scalable Applications for the Financial World</p>
+					<!-- <p class="tagline">Building Scalable Applications for the Financial World</p> -->
 				</div>
 
 				<!-- Nav -->
@@ -218,6 +287,7 @@
 						<li><a href="#portfolio" id="portfolio-link"><span class="icon solid fa-th">Projects</span></a></li>
 						<li><a href="#certifications" id="certifications-link"><span class="icon solid fa-certificate">Certifications</span></a></li>
 						<li><a href="#achievements" id="achievements-link"><span class="icon solid fa-trophy">Achievements</span></a></li>
+						<li><a href="#education" id="education-link"><span class="icon solid fa-trophy">Education</span></a></li>
 						<li><a href="#about" id="about-link"><span class="icon solid fa-user">About Me</span></a></li>
 						<li><a href="#contact" id="contact-link"><span class="icon solid fa-envelope">Contact</span></a></li>
 					</ul>
@@ -397,6 +467,45 @@
 				</div>
 			</section>
 
+			<!-- Portfolio -->
+			<section id="portfolio" class="four">
+				<div class="container">
+					<header>
+						<h2>Key Projects</h2>
+					</header>
+					<p>Highlighting some of my significant contributions in software development:</p>
+					<div class="row">
+						<div class="col-4 col-12-mobile">
+							<article class="item animate__animated animate__fadeIn">
+								<strong><a class="image fit"><img alt="App Management" /></a></strong>
+								<header>
+									<h3>Next-netlify-starter System</h3>
+									<p>A scalable web application built with Next.js and Netlify.</p>
+								</header>
+							</article>
+						</div>
+						<div class="col-4 col-12-mobile">
+							<article class="item animate__animated animate__fadeIn">
+								<strong><a class="image fit"><img alt="Forex Application" /></a></strong>
+								<header>
+									<h3>Foreign-exchange Application</h3>
+									<p>Real-time forex trading platform using Spring Boot and React.</p>
+								</header>
+							</article>
+						</div>
+						<div class="col-4 col-12-mobile">
+							<article class="item animate__animated animate__fadeIn">
+								<strong><a class="image fit"><img alt="IVR System" /></a></strong>
+								<header>
+									<h3>IVR Management System</h3>
+									<p>Interactive Voice Response system for customer support.</p>
+								</header>
+							</article>
+						</div>
+					</div>
+				</div>
+			</section>
+
 			<!-- Certifications -->
 			<section id="certifications" class="five">
 				<div class="container">
@@ -431,7 +540,7 @@
 				</div>
 			</section>
 
-			<section id="skills" class="three">
+			<section id="education" class="three">
 				<div class="container">
 					<header>
 						<h2>Educational Qualification</h2>
