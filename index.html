@@ -327,6 +327,41 @@
 			to { opacity: 0; visibility: hidden; }
 			} */
 
+			@media (max-width: 768px) {
+			.skills-container {
+				grid-template-columns: 1fr !important;
+				padding: 10px !important;
+			}
+
+			.skill-category {
+				margin: 10px 0;
+				padding: 15px;
+			}
+
+			.skill-card {
+				margin: 8px 0;
+				padding: 10px;
+			}
+
+			/* Fix for Education Section */
+			#education .skills-container {
+				grid-template-columns: 1fr;
+				max-width: 300px;
+				margin: 0 auto;
+			}
+
+			/* Ensure skill images are visible */
+			.skill-image {
+				width: 50px;
+				height: 50px;
+			}
+
+			/* Adjust animation timing for mobile */
+			.skill-card.animate {
+				animation-duration: 0.8s;
+			}
+			}
+
 		</style>
 	</head>
 	<body class="is-preload">
@@ -687,20 +722,27 @@
 		<!-- Scripts -->
 		<script>
 			// Skill Animation Trigger
+			// Updated Skill Animation Trigger
 			const skillsObserver = new IntersectionObserver((entries) => {
 				entries.forEach(entry => {
 					if (entry.isIntersecting) {
 						const skillCards = document.querySelectorAll('.skill-card');
 						skillCards.forEach((card, index) => {
 							setTimeout(() => {
-								card.classList.add('animate');
-							}, index * 100); // Stagger animation
+								card.style.opacity = '1';
+								card.style.transform = 'translateY(0)';
+							}, index * 150);
 						});
 					}
 				});
-			}, { threshold: 0.5 });
-	
-			skillsObserver.observe(document.querySelector('#skills'));
+			}, { 
+				threshold: 0.1, // Lower threshold for mobile
+				rootMargin: '0px 0px -50px 0px' // Trigger earlier
+			});
+
+			document.querySelectorAll('.skills-container').forEach(container => {
+				skillsObserver.observe(container);
+			});
 		</script>
 
 	</body>
