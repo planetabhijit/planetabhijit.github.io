@@ -362,6 +362,56 @@
 			}
 			}
 
+			/* Simple Vertical Experience Layout */
+.experience-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+.experience-item {
+    background: #f8f9fa;
+    border-radius: 8px;
+    padding: 25px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.experience-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+}
+
+.experience-item h3 {
+    color: #2c3e50;
+    margin-bottom: 15px;
+    font-size: 1.4em;
+}
+
+.experience-item ul {
+    padding-left: 20px;
+}
+
+.experience-item li {
+    margin-bottom: 8px;
+    line-height: 1.6;
+}
+
+/* Dark Mode Support */
+.dark-mode .experience-item {
+    background: #2c3e50;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.dark-mode .experience-item h3 {
+    color: #1e90ff;
+}
+
+.dark-mode .experience-item li {
+    color: #ecf0f1;
+}	
+
 		</style>
 	</head>
 	<body class="is-preload">
@@ -430,27 +480,25 @@
 				</div>
 			</section>
 
-			<!-- Experience -->
+						<!-- Experience -->
 			<section id="experience" class="two">
 				<div class="container">
-				  <header>
-					<h2>Professional Experience</h2>
-				  </header>
-				  <div class="timeline">
-					<div class="timeline-item animate__animated animate__fadeInLeft">
-					  <!-- <div class="timeline-date">2022-Present</div> -->
-					  <div class="timeline-content">
-						<h3>Software Engineer (SDE-II)</h3>
-						<ul>
-						  <li>Developed and maintained critical applications</li>
-						  <li>Leveraged Java, Spring Boot, and cloud technologies</li>
-						  <li>Collaborated with cross-functional teams</li>
-						</ul>
-					  </div>
+					<header>
+						<h2>Professional Experience</h2>
+					</header>
+					<div class="experience-container">
+						<div class="experience-item animate__animated animate__fadeInLeft">
+							<h3>Software Engineer (SDE-II)</h3>
+							<ul>
+								<li>Developed and maintained critical applications</li>
+								<li>Leveraged Java, Spring Boot, and cloud technologies</li>
+								<li>Collaborated with cross-functional teams</li>
+							</ul>
+						</div>
+						<!-- Add more experience items as needed -->
 					</div>
-				  </div>
 				</div>
-			  </section>
+			</section>
 
 			<!-- Portfolio -->
 			<!-- Skills Section -->
