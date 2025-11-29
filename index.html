@@ -496,6 +496,31 @@
         color: white !important;
     }
 
+	/* --- Custom Profile Avatar Size --- */
+.my-profile-avatar {
+    width: 80px; /* Example size: 128px wide */
+    height: 80px; /* Example size: 128px high */
+    overflow: hidden; /* Ensures image doesn't break out of the circle */
+    border-radius: 50%; /* Makes it perfectly round */
+    margin: 0 auto 20px auto; /* Centers it and adds space below */
+    display: block; /* Makes it a block element to respect margin auto */
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.2), 
+                0 0 10px rgba(0, 0, 0, 0.5); /* Adds a subtle white border and shadow */
+}
+
+.my-profile-avatar img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures image fills the circle without distortion */
+}
+
+/* Adjust the sidebar padding if the new image size makes it too cramped */
+#header .inner {
+    padding-top: 40px !important; /* Increase if needed */
+    padding-bottom: 40px !important; /* Increase if needed */
+}
+
 		</style>
 	</head>
 	<body class="is-preload">
@@ -515,9 +540,8 @@
 			<div class="top">
 				<!-- Logo -->
 				<div id="logo">
-					<span class="image avatar48"><img src="images/abhijit.jpeg" alt="Abhijit Prasad" /></span>
-					<h1 id="title">Abhijit Prasad</h1>
-					<p>Software Engineer (SDE-II)</p>
+<span class="image my-profile-avatar"><img src="images/abhi1.jpeg" alt="Abhijit Prasad" /></span>					<h1 id="title">Abhijit Prasad</h1>
+					<p>Software Engineer - II</p>
 					<p> at JP Morgan Chase</p>
 					<!-- <p class="tagline">Building Scalable Applications for the Financial World</p> -->
 				</div>
