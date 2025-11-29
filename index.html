@@ -1,267 +1,285 @@
 <!DOCTYPE HTML>
 <html lang="en">
-	<head>
-		<title>Abhijit Prasad - Software Engineer at JP Morgan Chase</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<meta name="description" content="Abhijit Prasad's portfolio - Software Engineer specializing in Java, Spring Boot, and enterprise applications">
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-		<link rel="icon" type="image/png" href="images/apicon.png">
-		<!-- Preconnect to StatCounter for faster loading -->
-		<link rel="preconnect" href="https://statcounter.com">
-		<link rel="preconnect" href="https://c.statcounter.com">
-		<style>
-			/* Custom Styles */
-			.icon.brands {
-				opacity: 0.7;
-				transition: opacity 0.2s ease-in-out, filter 0.2s ease-in-out;
-			}
-			.icon.brands:hover {
-				opacity: 1;
-				filter: brightness(1.2);
-			}
-			.icon.brands img {
-				opacity: 0.7;
-				transition: opacity 0.2s ease-in-out, filter 0.2s ease-in-out;
-			}
-			.icon.brands:hover img {
-				opacity: 1;
-				filter: brightness(1.2);
-			}
-			.hackerrank-icon {
-				position: relative;
-				top: 3.5px;
-			}
-			.skill-bar {
-				width: 100%;
-				background-color: #e0e0e0;
-				border-radius: 5px;
-				margin: 10px 0;
-			}
-			.skill-level {
-				height: 10px;
-				background-color: #4CAF50;
-				border-radius: 5px;
-				text-align: right;
-				padding-right: 5px;
-				color: white;
-				font-size: 12px;
-			}
-			.dark-mode {
-				background-color: #121212;
-				color: #ffffff;
-			}
-			.dark-mode .skill-bar {
-				background-color: #333;
-			}
-			.dark-mode .skill-level {
-				background-color: #1e90ff;
-			}
-			.dark-mode-toggle {
-				position: fixed;
-				top: 20px;
-				right: 20px;
-				z-index: 1000;
-				cursor: pointer;
-			}
 
-			/* Ading dark mode for other section where it is not wokring*/
+<head>
+	<title>Abhijit Prasad - Software Engineer at JP Morgan Chase</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<meta name="description"
+		content="Abhijit Prasad's portfolio - Software Engineer specializing in Java, Spring Boot, and enterprise applications">
+	<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+	<link rel="icon" type="image/png" href="images/apicon.png">
+	<!-- Preconnect to StatCounter for faster loading -->
+	<link rel="preconnect" href="https://statcounter.com">
+	<link rel="preconnect" href="https://c.statcounter.com">
+	<style>
+		/* Custom Styles */
+		.icon.brands {
+			opacity: 0.7;
+			transition: opacity 0.2s ease-in-out, filter 0.2s ease-in-out;
+		}
 
-			/* Add these dark mode overrides */
-			.dark-mode .skill-category {
-				background: linear-gradient(135deg, #2c3e50, #34495e) !important;
-			}
+		.icon.brands:hover {
+			opacity: 1;
+			filter: brightness(1.2);
+		}
 
-			.dark-mode .skill-name {
-				color: #ffffff !important;
-			}
+		.icon.brands img {
+			opacity: 0.7;
+			transition: opacity 0.2s ease-in-out, filter 0.2s ease-in-out;
+		}
 
-			.dark-mode .skill-category h3 {
-				color: #ffffff !important;
-				border-bottom-color: #3498db !important;
-			}
+		.icon.brands:hover img {
+			opacity: 1;
+			filter: brightness(1.2);
+		}
 
-			.dark-mode #education h2 {
-				color: #ffffff !important;
-			}
+		.hackerrank-icon {
+			position: relative;
+			top: 3.5px;
+		}
 
-			.dark-mode .skill-card {
-				background: rgba(255, 255, 255, 0.1) !important;
-			}
+		.skill-bar {
+			width: 100%;
+			background-color: #e0e0e0;
+			border-radius: 5px;
+			margin: 10px 0;
+		}
 
-			/* Add these new dark mode rules */
-			.dark-mode #experience,
-			.dark-mode #portfolio {
-				background-color: #1a1a1a !important;
-				color: #ffffff !important;
-			}
+		.skill-level {
+			height: 10px;
+			background-color: #4CAF50;
+			border-radius: 5px;
+			text-align: right;
+			padding-right: 5px;
+			color: white;
+			font-size: 12px;
+		}
 
-			.dark-mode .experience-item h3,
-			.dark-mode .item h3 {
-				color: #1e90ff !important;
-			}
+		.dark-mode {
+			background-color: #121212;
+			color: #ffffff;
+		}
 
-			.dark-mode .experience-item ul,
-			.dark-mode .item p {
-				color: #cccccc !important;
-			}
+		.dark-mode .skill-bar {
+			background-color: #333;
+		}
 
-			.dark-mode .container h2 {
-				color: #ffffff !important;
-				border-bottom: 2px solid #1e90ff;
-			}
+		.dark-mode .skill-level {
+			background-color: #1e90ff;
+		}
 
-			.dark-mode .animate__animated {
-				color: inherit !important;
-			}
+		.dark-mode-toggle {
+			position: fixed;
+			top: 20px;
+			right: 20px;
+			z-index: 1000;
+			cursor: pointer;
+		}
 
-			/* Add these rules to your dark mode styles */
-			.dark-mode #education .container {
-				background-color: #1a1a1a !important;
-			}
+		/* Ading dark mode for other section where it is not wokring*/
 
-			.dark-mode #education .skill-card {
-				background: rgba(255, 255, 255, 0.1) !important;
-				border: 1px solid rgba(255, 255, 255, 0.1) !important;
-			}
+		/* Add these dark mode overrides */
+		.dark-mode .skill-category {
+			background: linear-gradient(135deg, #2c3e50, #34495e) !important;
+		}
 
-			.dark-mode #education .skill-name {
-				color: #ffffff !important;
-				font-weight: 500 !important;
-			}
+		.dark-mode .skill-name {
+			color: #ffffff !important;
+		}
 
-			.dark-mode #education .skill-image {
-				filter: brightness(0.8) contrast(1.2);
-			}
+		.dark-mode .skill-category h3 {
+			color: #ffffff !important;
+			border-bottom-color: #3498db !important;
+		}
 
-			/* Updated Skills Section Styles */
-			.skills-container {
-				display: grid;
-				grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-				gap: 20px;
-				padding: 20px;
-        	}
+		.dark-mode #education h2 {
+			color: #ffffff !important;
+		}
 
-			.skill-category {
-				background: linear-gradient(135deg, #2c3e50, #34495e);
-				border-radius: 15px;
-				padding: 20px;
-				box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-				transition: transform 0.3s ease, box-shadow 0.3s ease;
-			}
+		.dark-mode .skill-card {
+			background: rgba(255, 255, 255, 0.1) !important;
+		}
 
-			.skill-category:hover {
-				transform: translateY(-10px);
-				box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
-			}
+		/* Add these new dark mode rules */
+		.dark-mode #experience,
+		.dark-mode #portfolio {
+			background-color: #1a1a1a !important;
+			color: #ffffff !important;
+		}
 
-			.skill-category h3 {
-				font-size: 1.5rem;
-				color: #fff;
-				margin-bottom: 15px;
-				text-align: center;
-				border-bottom: 2px solid #3498db;
-				padding-bottom: 10px;
-			}
+		.dark-mode .experience-item h3,
+		.dark-mode .item h3 {
+			color: #1e90ff !important;
+		}
 
-			.skill-card {
-				background: rgba(255, 255, 255, 0.1);
-				border-radius: 10px;
-				padding: 15px;
-				text-align: center;
-				margin-bottom: 10px;
-				opacity: 0;
-				transform: translateY(-100%);
-				transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-				box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-				will-change: transform, opacity;
-			}
+		.dark-mode .experience-item ul,
+		.dark-mode .item p {
+			color: #cccccc !important;
+		}
 
-			.skill-card.animate {
-				opacity: 1;
-				transform: translateY(0);
-			}
+		.dark-mode .container h2 {
+			color: #ffffff !important;
+			border-bottom: 2px solid #1e90ff;
+		}
 
-			.skill-card:hover {
-				background: rgba(255, 255, 255, 0.2);
-				transform: translateY(-5px);
-			}
+		.dark-mode .animate__animated {
+			color: inherit !important;
+		}
 
-			.skill-icon {
-				font-size: 2.5rem;
-				margin-bottom: 10px;
-				color: #3498db;
-			}
+		/* Add these rules to your dark mode styles */
+		.dark-mode #education .container {
+			background-color: #1a1a1a !important;
+		}
 
-			.skill-name {
-				font-size: 1.1rem;
-				font-weight: 600;
-				color: #121212;
-			}
+		.dark-mode #education .skill-card {
+			background: rgba(255, 255, 255, 0.1) !important;
+			border: 1px solid rgba(255, 255, 255, 0.1) !important;
+		}
 
-			/* Vibrant Colors for Categories */
-			.skill-category.languages {
-				background: linear-gradient(135deg, #d2d5c5, #d2d5c5);
-			}
+		.dark-mode #education .skill-name {
+			color: #ffffff !important;
+			font-weight: 500 !important;
+		}
 
-			.skill-category.cloud {
-				background: linear-gradient(135deg, #d2d5c5, #d2d5c5);
-			}
+		.dark-mode #education .skill-image {
+			filter: brightness(0.8) contrast(1.2);
+		}
 
-			.skill-category.frontend {
-				background: linear-gradient(135deg, #d2d5c5, #d2d5c5);
-			}
+		/* Updated Skills Section Styles */
+		.skills-container {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+			gap: 20px;
+			padding: 20px;
+		}
 
-			.skill-category.database {
-				background: linear-gradient(135deg, #d2d5c5, #d2d5c5);
-			}
+		.skill-category {
+			background: linear-gradient(135deg, #2c3e50, #34495e);
+			border-radius: 15px;
+			padding: 20px;
+			box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+			transition: transform 0.3s ease, box-shadow 0.3s ease;
+		}
 
-			.skill-image {
-				width: 60px; /* Adjust based on your image size */
-				height: 60px;
-				object-fit: contain;
-				margin-bottom: 10px;
-				transition: transform 0.3s ease;
-				filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
-			}
+		.skill-category:hover {
+			transform: translateY(-10px);
+			box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+		}
 
-			/* Optional: Add hover effect to image */
-			.skill-card:hover .skill-image {
-				transform: scale(1.1);
-				filter: drop-shadow(0 4px 8px rgba(0,0,0,0.2));
-			}
+		.skill-category h3 {
+			font-size: 1.5rem;
+			color: #fff;
+			margin-bottom: 15px;
+			text-align: center;
+			border-bottom: 2px solid #3498db;
+			padding-bottom: 10px;
+		}
 
-			/* Footer Button Spacing */
-			footer {
-				display: flex;
-				gap: 100px; /* Adds space between buttons */
-				justify-content: center; /* Centers the buttons */
-				flex-wrap: wrap; /* Ensures buttons wrap on smaller screens */
-			}
+		.skill-card {
+			background: rgba(255, 255, 255, 0.1);
+			border-radius: 10px;
+			padding: 15px;
+			text-align: center;
+			margin-bottom: 10px;
+			opacity: 0;
+			transform: translateY(-100%);
+			transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+			box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+			will-change: transform, opacity;
+		}
 
-			footer .button {
-				margin: 10px 0; /* Adds margin for better spacing on smaller screens */
-			}
+		.skill-card.animate {
+			opacity: 1;
+			transform: translateY(0);
+		}
 
-			#header .icons {
+		.skill-card:hover {
+			background: rgba(255, 255, 255, 0.2);
+			transform: translateY(-5px);
+		}
+
+		.skill-icon {
+			font-size: 2.5rem;
+			margin-bottom: 10px;
+			color: #3498db;
+		}
+
+		.skill-name {
+			font-size: 1.1rem;
+			font-weight: 600;
+			color: #121212;
+		}
+
+		/* Vibrant Colors for Categories */
+		.skill-category.languages {
+			background: linear-gradient(135deg, #d2d5c5, #d2d5c5);
+		}
+
+		.skill-category.cloud {
+			background: linear-gradient(135deg, #d2d5c5, #d2d5c5);
+		}
+
+		.skill-category.frontend {
+			background: linear-gradient(135deg, #d2d5c5, #d2d5c5);
+		}
+
+		.skill-category.database {
+			background: linear-gradient(135deg, #d2d5c5, #d2d5c5);
+		}
+
+		.skill-image {
+			width: 60px;
+			/* Adjust based on your image size */
+			height: 60px;
+			object-fit: contain;
+			margin-bottom: 10px;
+			transition: transform 0.3s ease;
+			filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+		}
+
+		/* Optional: Add hover effect to image */
+		.skill-card:hover .skill-image {
+			transform: scale(1.1);
+			filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
+		}
+
+		/* Footer Button Spacing */
+		footer {
+			display: flex;
+			gap: 100px;
+			/* Adds space between buttons */
+			justify-content: center;
+			/* Centers the buttons */
+			flex-wrap: wrap;
+			/* Ensures buttons wrap on smaller screens */
+		}
+
+		footer .button {
+			margin: 10px 0;
+			/* Adds margin for better spacing on smaller screens */
+		}
+
+		#header .icons {
 			margin-left: -20px;
 			padding-left: 0;
 			justify-content: flex-start;
-			}
+		}
 
-			#header .icons li {
+		#header .icons li {
 			margin-right: 15px;
-			}
+		}
 
-			.icon.brands {
+		.icon.brands {
 			opacity: 0.7;
 			transition: opacity 0.2s ease-in-out, filter 0.2s ease-in-out;
-			}
+		}
 
-			/* Add to existing styles */
-			#chatbot-toggle {
+		/* Add to existing styles */
+		#chatbot-toggle {
 			position: fixed;
 			bottom: 30px;
 			right: 30px;
@@ -272,30 +290,30 @@
 			color: white;
 			border: none;
 			cursor: pointer;
-			box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+			box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 			z-index: 1000;
 			transition: all 0.3s ease;
-			}
+		}
 
-			#chatbot-container {
+		#chatbot-container {
 			position: fixed;
 			bottom: 100px;
 			right: 30px;
 			width: 350px;
 			background: white;
 			border-radius: 15px;
-			box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+			box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
 			display: none;
 			flex-direction: column;
 			z-index: 1000;
-			}
+		}
 
-			.dark-mode #chatbot-container {
+		.dark-mode #chatbot-container {
 			background: #2c3e50;
 			color: white;
-			}
+		}
 
-			#chatbot-header {
+		#chatbot-header {
 			padding: 15px;
 			background: #1e90ff;
 			color: white;
@@ -303,16 +321,18 @@
 			display: flex;
 			justify-content: space-between;
 			align-items: center;
-			}
+		}
 
-			#chatbot-messages {
+		#chatbot-messages {
 			height: 300px;
 			overflow-y: auto;
 			padding: 15px;
-			}
+		}
 
-			/* Add to existing styles */
-			/* .loading-screen {
+
+
+		/* Add to existing styles */
+		/* .loading-screen {
 			position: fixed;
 			top: 0;
 			left: 0;
@@ -326,11 +346,46 @@
 			animation: fadeOut 1s 1s forwards;
 			} */
 
-			/* @keyframes fadeOut {
+		/* @keyframes fadeOut {
 			to { opacity: 0; visibility: hidden; }
 			} */
 
-			@media (max-width: 768px) {
+		/* --- Custom Profile Avatar Size --- */
+		.my-profile-avatar {
+			width: 68px;
+			/* Example size: 128px wide */
+			height: 68px;
+			/* Example size: 128px high */
+			overflow: hidden;
+			/* Ensures image doesn't break out of the circle */
+			border-radius: 500%;
+			/* Makes it perfectly round */
+			margin: 0 auto 20px auto;
+			/* Centers it and adds space below */
+			display: block;
+			/* Makes it a block element to respect margin auto */
+			box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.2),
+				0 0 10px rgba(0, 0, 0, 0.5);
+			/* Adds a subtle white border and shadow */
+		}
+
+		.my-profile-avatar img {
+			display: block;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			/* Ensures image fills the circle without distortion */
+		}
+
+		/* Adjust the sidebar padding if the new image size makes it too cramped */
+		#header .inner {
+			padding-top: 40px !important;
+			/* Increase if needed */
+			padding-bottom: 40px !important;
+			/* Increase if needed */
+		}
+
+		@media (max-width: 768px) {
 			.skills-container {
 				grid-template-columns: 1fr !important;
 				padding: 10px !important;
@@ -363,9 +418,9 @@
 			.skill-card.animate {
 				animation-duration: 0.8s;
 			}
-			}
+		}
 
-			/* Simple Vertical Experience Layout */
+		/* Simple Vertical Experience Layout */
 		.experience-container {
 			max-width: 800px;
 			margin: 0 auto;
@@ -377,13 +432,13 @@
 			border-radius: 8px;
 			padding: 25px;
 			margin-bottom: 30px;
-			box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+			box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 			transition: transform 0.3s ease, box-shadow 0.3s ease;
 		}
 
 		.experience-item:hover {
 			transform: translateY(-5px);
-			box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+			box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
 		}
 
 		.experience-item h3 {
@@ -404,7 +459,7 @@
 		/* Dark Mode Support */
 		.dark-mode .experience-item {
 			background: #2c3e50;
-			box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+			box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 		}
 
 		.dark-mode .experience-item h3 {
@@ -413,77 +468,265 @@
 
 		.dark-mode .experience-item li {
 			color: #ecf0f1;
-		}	
+		}
 
-		</style>
-	</head>
-	<body class="is-preload">
+		/* =========================================
+       NEW GLOBAL GRADIENT BACKGROUND OVERRIDES
+       ========================================= */
 
-		<!-- Dark Mode Toggle -->
-		<div class="dark-mode-toggle" onclick="toggleDarkMode()">
-			<i class="fas fa-moon"></i>
-		</div>
+		/* --- PARTICLES.JS CONTAINER STYLES --- */
+		#particles-js {
+			position: fixed !important;
+			width: 100%;
+			height: 100%;
+			min-height: 100vh;
+			/* Ensures it covers the full viewport height */
+			z-index: 1;
+			/* Sets it as a background layer */
+			top: 0;
+			left: 0;
+		}
 
-		<!-- Loading Screen -->
-		<div class="loading-screen">
-		  <div class="spinner"></div>
-		</div>
+		/* Ensure all content sections are layered *above* the particles */
+		#main>section {
+			position: relative;
+			z-index: 5;
+		}
 
-		<!-- Header -->
-		<div id="header">
-			<div class="top">
-				<!-- Logo -->
-				<div id="logo">
-					<span class="image avatar48"><img src="images/abhijit.jpeg" alt="Abhijit Prasad" /></span>
-					<h1 id="title">Abhijit Prasad</h1>
-					<p>Software Engineer (SDE-II)</p>
-					<p> at JP Morgan Chase</p>
-					<!-- <p class="tagline">Building Scalable Applications for the Financial World</p> -->
-				</div>
+		/* 1. Apply the Purple-to-Teal Gradient to the Main Container */
+		#main {
+			/* Matches your screenshot: Muted Purple to Blue-Grey */
+			background: linear-gradient(120deg, #5e4b56 0%, #6f8c95 100%) !important;
 
-				<!-- Nav -->
-				<nav id="nav">
-					<ul>
-						<li><a href="#top" id="top-link"><span class="icon solid fa-home">Intro</span></a></li>
-						<li><a href="#experience" id="experience-link"><span class="icon solid fa-briefcase">Experience</span></a></li>
-						<li><a href="#skills" id="skills-link"><span class="icon solid fa-cogs">Skills</span></a></li>
-						<li><a href="#portfolio" id="portfolio-link"><span class="icon solid fa-th">Projects</span></a></li>
-						<li><a href="#certifications" id="certifications-link"><span class="icon solid fa-certificate">Certifications</span></a></li>
-						<li><a href="#achievements" id="achievements-link"><span class="icon solid fa-trophy">Achievements</span></a></li>
-						<li><a href="#education" id="education-link"><span class="icon solid fa-trophy">Education</span></a></li>
-						<li><a href="#about" id="about-link"><span class="icon solid fa-user">About Me</span></a></li>
-						<li><a href="#contact" id="contact-link"><span class="icon solid fa-envelope">Contact</span></a></li>
-					</ul>
-					<ul class="icons">
-						<li><a href="https://www.linkedin.com/in/abhijitprasaddev" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
-						<li><a href="https://github.com/planetabhijit" class="icon brands fa-github"><span class="label">Github</span></a></li>
-						<li><a href="https://leetcode.com/planetabhijit" class="icon brands fa-user"><img src="images/leetcode.webp" alt="LeetCode" style="width:24px;height:20px;"><span class="label">LeetCode</span></a></li>
-						<li><a href="https://www.hackerrank.com/abhijitprasadra1" class="icon brands fa-code"><img src="images/hackerrank.png" alt="HackerRank" style="width:39px;height:23px;" class="hackerrank-icon"><span class="label">HackerRank</span></a></li>
-					</ul>
-				</nav>
+			/* Ensures the background covers the whole screen and stays fixed when you scroll */
+			background-attachment: fixed !important;
+			background-size: cover !important;
+			min-height: 100vh;
+		}
+
+		/* 2. FORCE remove backgrounds from all internal sections */
+		/* This makes the "black" and "white" stripes transparent so the gradient shows through */
+		#main>section,
+		.one,
+		.two,
+		.three,
+		.four,
+		.five,
+		.six,
+		.seven,
+		.eight,
+		#top,
+		#experience,
+		#skills,
+		#portfolio,
+		#certifications,
+		#achievements,
+		#education,
+		#about,
+		#contact {
+			background: transparent !important;
+			background-color: transparent !important;
+			background-image: none !important;
+			/* Removes the dark overlay image on the Intro */
+			box-shadow: none !important;
+			/* Removes divider lines */
+			border: none !important;
+		}
+
+		/* 3. Update Text Colors for Readability */
+		/* Since the gradient is dark, we force text to be white */
+		#main h2,
+		#main h3,
+		#main h4,
+		#main p,
+		#main li,
+		#main strong,
+		#main span {
+			color: #ffffff !important;
+			text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+			/* Adds subtle shadow to make text pop */
+		}
+
+		/* 4. Add "Glass" Cards */
+		/* Instead of solid block colors, we make cards semi-transparent */
+		.experience-item,
+		.skill-card,
+		.skill-category,
+		form input,
+		form textarea {
+			background: rgba(255, 255, 255, 0.1) !important;
+			/* 10% opaque white */
+			backdrop-filter: blur(10px);
+			/* Blurs the background behind the card */
+			border: 1px solid rgba(255, 255, 255, 0.2) !important;
+			color: #ffffff !important;
+			box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+		}
+
+		/* 5. Fix Input Placeholders to be readable */
+		::placeholder {
+			color: rgba(255, 255, 255, 0.7) !important;
+		}
+
+		/* --- PORTFOLIO ITEM STYLES --- */
+
+		/* Targets the article card inside the portfolio section */
+
+		/* --- PORTFOLIO ITEM STYLES --- */
+		/* Targets the article card inside the portfolio section */
+		#portfolio .item {
+			/* REMOVE the solid black background and replace it with the glass style */
+			background: rgba(255, 255, 255, 0.1) !important;
+			/* 10% opaque white */
+			backdrop-filter: blur(10px);
+			/* Blurs the background behind the card */
+			padding: 25px;
+			border-radius: 15px;
+			border: 1px solid rgba(255, 255, 255, 0.2) !important;
+			margin-bottom: 20px;
+		}
+
+		/* Optional: Ensures the image fits nicely within the black box */
+		#portfolio .item .image {
+			margin: -25px -25px 20px -25px;
+			/* Pulls image to the edges if you want it flush */
+			border-radius: 15px 15px 0 0;
+			/* Rounds top corners only */
+			display: block;
+			width: calc(100% + 50px);
+		}
+
+		/* --- FIX: Portfolio Card "Double Box" Issue --- */
+		#portfolio .item header,
+		#portfolio .item p,
+		#portfolio .item strong,
+		/* Target links and the image wrapper specifically */
+		#portfolio .item a,
+		#portfolio .item .image {
+			background-color: transparent !important;
+			/* Ensures text remains white on the black background */
+			color: #ffffff !important;
+			box-shadow: none !important;
+		}
+
+		/* Fix for the missing image alt text/placeholder */
+		#portfolio .item img {
+			/* If your images are dark, this makes them visible on black */
+			filter: brightness(1.1);
+			display: block;
+			/* Ensures it takes full space */
+		}
+
+		/* --- TITLE CONTRAST ENHANCEMENT --- */
+		#main h2,
+		#main header h2,
+		#main section header h2,
+		#main section header h3 {
+			color: #FFFFFF !important;
+			/* This text shadow gives a strong, non-fading contrast and depth */
+			text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.9),
+				/* Soft glow */
+				0 4px 6px rgba(0, 0, 0, 0.7) !important;
+			/* Sharp depth */
+		}
+
+		/* --- FIX: Force Content to Left and Expand Width on Desktop --- */
+
+		/* * Target the overall main content container and remove its positioning/width limits.
+* This is for screens larger than 736px (standard desktop view).
+*/
+		/* Fix: Ensures the sidebar is layered above the particle background */
+		#header {
+			z-index: 10;
+		}
+	</style>
+</head>
+
+<body class="is-preload">
+	<!-- Dark Mode Toggle -->
+	<div class="dark-mode-toggle" onclick="toggleDarkMode()">
+		<i class="fas fa-moon"></i>
+	</div>
+
+	<!-- Loading Screen -->
+	<div class="loading-screen">
+		<div class="spinner"></div>
+	</div>
+
+	<!-- Header -->
+	<div id="header">
+		<div class="top">
+			<!-- Logo -->
+			<div id="logo">
+				<span class="image my-profile-avatar"><img src="images/abhi3.jpeg" alt="Abhijit Prasad" /></span>
+				<h1 id="title">Abhijit Prasad</h1>
+				<p>Software Engineer (SDE-II)</p>
+				<p> at JP Morgan Chase</p>
+				<!-- <p class="tagline">Building Scalable Applications for the Financial World</p> -->
 			</div>
 
+			<!-- Nav -->
+			<nav id="nav">
+				<ul>
+					<li><a href="#top" id="top-link"><span class="icon solid fa-home">Intro</span></a></li>
+					<li><a href="#experience" id="experience-link"><span
+								class="icon solid fa-briefcase">Experience</span></a></li>
+					<li><a href="#skills" id="skills-link"><span class="icon solid fa-cogs">Skills</span></a></li>
+					<li><a href="#portfolio" id="portfolio-link"><span class="icon solid fa-th">Projects</span></a></li>
+					<li><a href="#certifications" id="certifications-link"><span
+								class="icon solid fa-certificate">Certifications</span></a></li>
+					<li><a href="#achievements" id="achievements-link"><span
+								class="icon solid fa-trophy">Achievements</span></a></li>
+					<li><a href="#education" id="education-link"><span class="icon solid fa-trophy">Education</span></a>
+					</li>
+					<li><a href="#about" id="about-link"><span class="icon solid fa-user">About Me</span></a></li>
+					<li><a href="#contact" id="contact-link"><span class="icon solid fa-envelope">Contact</span></a>
+					</li>
+				</ul>
+				<ul class="icons">
+					<li><a href="https://www.linkedin.com/in/abhijitprasaddev" class="icon brands fa-linkedin"><span
+								class="label">LinkedIn</span></a></li>
+					<li><a href="https://github.com/planetabhijit" class="icon brands fa-github"><span
+								class="label">Github</span></a></li>
+					<li><a href="https://leetcode.com/planetabhijit" class="icon brands fa-user"><img
+								src="images/leetcode.webp" alt="LeetCode" style="width:24px;height:20px;"><span
+								class="label">LeetCode</span></a></li>
+					<li><a href="https://www.hackerrank.com/abhijitprasadra1" class="icon brands fa-code"><img
+								src="images/hackerrank.png" alt="HackerRank" style="width:39px;height:23px;"
+								class="hackerrank-icon"><span class="label">HackerRank</span></a></li>
+				</ul>
+			</nav>
 		</div>
 
-		<!-- Main -->
-		<div id="main">
+	</div>
+
+	<!-- Main -->
+	<div id="main">
+
+		<div id="particles-js"></div>
+
+		<section id="top" class="one dark cover">
 
 			<!-- Intro Section -->
 			<section id="top" class="one dark cover">
 				<div class="container">
 					<header>
-						<h2 class="alt animate__animated animate__fadeIn">Welcome! I'm <strong>Abhijit Prasad</strong></h2>
-						<p class="animate__animated animate__fadeInUp">Software Engineer at JP Morgan Chase, specializing in CIB Revenue Management Technology.<br />
-						Transforming complex challenges into efficient, scalable solutions with expertise in Java, Spring Boot, and cloud technologies.</p>
+						<h2 class="alt animate__animated animate__fadeIn">Welcome! I'm&nbsp; Abhijit Prasad</h2>
+						<p class="animate__animated animate__fadeInUp">Software Engineer at JP Morgan Chase,
+							specializing in CIB Revenue Management Technology.<br />
+							Transforming complex challenges into efficient, scalable solutions with expertise in Java,
+							Spring Boot, and cloud technologies.</p>
 					</header>
 					<footer>
-						<a href="#experience" class="button scrolly animate__animated animate__fadeInUp">Explore My Experience</a>
-						<a href="images/Abhijit_Prasad.pdf" class="button scrolly animate__animated animate__fadeInUp" download="Abhijit_Prasad_Resume.pdf">Download Resume</a>
+						<a href="#experience" class="button scrolly animate__animated animate__fadeInUp">Explore My
+							Experience</a>
+						<a href="images/Abhijit_Prasad.pdf" class="button scrolly animate__animated animate__fadeInUp"
+							download="Abhijit_Prasad_Resume.pdf">Download Resume</a>
 					</footer>
 				</div>
 			</section>
 
-						<!-- Experience -->
+			<!-- Experience -->
 			<section id="experience" class="two">
 				<div class="container">
 					<header>
@@ -527,13 +770,13 @@
 								<div class="skill-name">Python</div>
 							</div>
 							<div class="skill-card">
-								<a href ="https://javascript.info/" target="_blank"">
-									<img src="images/javascript.png" class="skill-image" alt="Java">
+								<a href="https://javascript.info/" target="_blank"">
+									<img src=" images/javascript.png" class="skill-image" alt="Java">
 								</a>
 								<div class="skill-name">JavaScript</div>
 							</div>
 						</div>
-		
+
 						<!-- Cloud -->
 						<div class="skill-category cloud">
 							<h3>Cloud & DevOps</h3>
@@ -552,7 +795,7 @@
 								<div class="skill-name">Terraform</div>
 							</div>
 						</div>
-		
+
 						<!-- Frontend -->
 						<div class="skill-category frontend">
 							<h3>Frontend</h3>
@@ -569,7 +812,7 @@
 								<div class="skill-name">CSS3</div>
 							</div>
 						</div>
-		
+
 						<!-- Databases -->
 						<div class="skill-category database">
 							<h3>Databases</h3>
@@ -642,13 +885,16 @@
 					<div class="row">
 						<div class="col-6 col-12-mobile">
 							<h3>HashiCorp Certified: Terraform Associate (003)</h3>
-							<p>Verified certification demonstrating expertise in infrastructure as code and cloud provisioning.</p>
-							<a href="https://www.credly.com/badges/0e565f4e-3fff-4f79-93c4-346c59e9efe6/public_url" target="_blank" class="button">Show Certification</a>
+							<p>Verified certification demonstrating expertise in infrastructure as code and cloud
+								provisioning.</p>
+							<a href="https://www.credly.com/badges/0e565f4e-3fff-4f79-93c4-346c59e9efe6/public_url"
+								target="_blank" class="button">Show Certification</a>
 						</div>
 						<div class="col-6 col-12-mobile">
 							<h3>Amazon Certified: AWS Cloud Practitioner (CLF-C02)</h3>
 							<p>Verified certification demonstrating expertise in AWS cloud technologies.</p>
-							<a href="https://www.credly.com/badges/d69c3e8b-7309-44b4-8177-a592cf05296b/public_url" target="_blank" class="button">Show Certification</a>
+							<a href="https://www.credly.com/badges/d69c3e8b-7309-44b4-8177-a592cf05296b/public_url"
+								target="_blank" class="button">Show Certification</a>
 						</div>
 					</div>
 				</div>
@@ -695,9 +941,17 @@
 						<h3>About Me</h3>
 					</header>
 					<!-- <a href="#" class="image featured"><img src="images/about_me.jpg" alt="Abhijit Prasad" /></a> -->
-					<p>As a Software Engineer, I bring a wealth of experience in developing robust, scalable solutions for complex financial systems. My journey in software development has been marked by a consistent drive for innovation and excellence, from creating advanced IVR systems to developing critical foreign exchange applications.</p>
-					<p>With a strong foundation in Java and related technologies, coupled with my recent focus on cloud technologies and infrastructure as code (Terraform), I'm passionate about leveraging cutting-edge tools to solve intricate business problems in the financial technology sector.</p>
-					<p>My diverse experiences across BFSI and E-commerce domains have honed my ability to adapt quickly to new challenges and deliver high-impact projects. When I'm not coding, I enjoy staying updated with the latest trends in tech and contributing to the developer community, always eager to learn and share knowledge with peers.</p>
+					<p>As a Software Engineer, I bring a wealth of experience in developing robust, scalable solutions
+						for complex financial systems. My journey in software development has been marked by a
+						consistent drive for innovation and excellence, from creating advanced IVR systems to developing
+						critical foreign exchange applications.</p>
+					<p>With a strong foundation in Java and related technologies, coupled with my recent focus on cloud
+						technologies and infrastructure as code (Terraform), I'm passionate about leveraging
+						cutting-edge tools to solve intricate business problems in the financial technology sector.</p>
+					<p>My diverse experiences across BFSI and E-commerce domains have honed my ability to adapt quickly
+						to new challenges and deliver high-impact projects. When I'm not coding, I enjoy staying updated
+						with the latest trends in tech and contributing to the developer community, always eager to
+						learn and share knowledge with peers.</p>
 				</div>
 			</section>
 
@@ -707,11 +961,14 @@
 					<header>
 						<h2>Get in Touch</h2>
 					</header>
-					<p>I'm always open to discussing new projects, innovative ideas, or opportunities to contribute to groundbreaking technology solutions. Feel free to reach out!</p>
+					<p>I'm always open to discussing new projects, innovative ideas, or opportunities to contribute to
+						groundbreaking technology solutions. Feel free to reach out!</p>
 					<form method="post" action="https://formspree.io/f/mnnaqyjy">
 						<div class="row">
-							<div class="col-6 col-12-mobile"><input type="text" name="name" placeholder="Name" required /></div>
-							<div class="col-6 col-12-mobile"><input type="email" name="email" placeholder="Email" required /></div>
+							<div class="col-6 col-12-mobile"><input type="text" name="name" placeholder="Name"
+									required /></div>
+							<div class="col-6 col-12-mobile"><input type="email" name="email" placeholder="Email"
+									required /></div>
 							<div class="col-12">
 								<textarea name="message" placeholder="Message" required></textarea>
 							</div>
@@ -722,96 +979,205 @@
 					</form>
 				</div>
 			</section>
+	</div>
+
+	<!-- Footer -->
+	<div id="footer">
+		<!-- Copyright -->
+		<ul class="copyright">
+			<li>&copy; 2018 Abhijit Prasad. All rights reserved.</li>
+		</ul>
+	</div>
+
+	<div id="chatbot-container">
+		<div id="chatbot-header">
+			<span>Ask Abhijit</span>
+			<button id="chatbot-close">×</button>
 		</div>
-
-		<!-- Footer -->
-		<div id="footer">
-			<!-- Copyright -->
-			<ul class="copyright">
-				<li>&copy; 2018 Abhijit Prasad. All rights reserved.</li>
-			</ul>
+		<div id="chatbot-messages"></div>
+		<div id="chatbot-input">
+			<input type="text" placeholder="Type your question..." id="chatbot-query">
+			<button id="chatbot-send"><i class="fas fa-paper-plane"></i></button>
 		</div>
+	</div>
+	<button id="chatbot-toggle" class="animate__animated animate__bounceIn">
+		<i class="fas fa-robot"></i>
+	</button>
 
-		<div id="chatbot-container">
-			<div id="chatbot-header">
-			  <span>Ask Abhijit</span>
-			  <button id="chatbot-close">×</button>
-			</div>
-			<div id="chatbot-messages"></div>
-			<div id="chatbot-input">
-			  <input type="text" placeholder="Type your question..." id="chatbot-query">
-			  <button id="chatbot-send"><i class="fas fa-paper-plane"></i></button>
-			</div>
-		  </div>
-		  <button id="chatbot-toggle" class="animate__animated animate__bounceIn">
-			<i class="fas fa-robot"></i>
-		  </button>
+	<script>
+		// Chatbot Logic
+		document.addEventListener('DOMContentLoaded', () => {
+			const chatbotToggle = document.getElementById('chatbot-toggle');
+			const chatbotContainer = document.getElementById('chatbot-container');
 
-		<script>
-			// Chatbot Logic
-			document.addEventListener('DOMContentLoaded', () => {
-			  const chatbotToggle = document.getElementById('chatbot-toggle');
-			  const chatbotContainer = document.getElementById('chatbot-container');
-			  
-			  chatbotToggle.addEventListener('click', () => {
+			chatbotToggle.addEventListener('click', () => {
 				chatbotContainer.style.display = 'flex';
 				chatbotToggle.style.transform = 'scale(0.9)';
-			  });
-			
-			  document.getElementById('chatbot-close').addEventListener('click', () => {
+			});
+
+			document.getElementById('chatbot-close').addEventListener('click', () => {
 				chatbotContainer.style.display = 'none';
 				chatbotToggle.style.transform = 'scale(1)';
-			  });
 			});
-		</script>
+		});
+	</script>
 
-		<!-- Scripts -->
-		<script src="assets/js/jquery.min.js"></script>
-		<script src="assets/js/jquery.scrolly.min.js"></script>
-		<script src="assets/js/jquery.scrollex.min.js"></script>
-		<script src="assets/js/browser.min.js"></script>
-		<script src="assets/js/breakpoints.min.js"></script>
-		<script src="assets/js/util.js"></script>
-		<script src="assets/js/main.js"></script>
-		<script>
-			// Dark Mode Toggle
-			function toggleDarkMode() {
-				document.body.classList.toggle('dark-mode');
-				const icon = document.querySelector('.dark-mode-toggle i');
-				if (document.body.classList.contains('dark-mode')) {
-					icon.classList.remove('fa-moon');
-					icon.classList.add('fa-sun');
-				} else {
-					icon.classList.remove('fa-sun');
-					icon.classList.add('fa-moon');
-				}
+	<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/jquery.scrolly.min.js"></script>
+	<script src="assets/js/jquery.scrollex.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+	<script>
+		// Dark Mode Toggle
+		function toggleDarkMode() {
+			document.body.classList.toggle('dark-mode');
+			const icon = document.querySelector('.dark-mode-toggle i');
+			if (document.body.classList.contains('dark-mode')) {
+				icon.classList.remove('fa-moon');
+				icon.classList.add('fa-sun');
+			} else {
+				icon.classList.remove('fa-sun');
+				icon.classList.add('fa-moon');
 			}
-		</script>
-		<!-- Scripts -->
-		<script>
-			// Skill Animation Trigger
-			// Updated Skill Animation Trigger
-			const skillsObserver = new IntersectionObserver((entries) => {
-				entries.forEach(entry => {
-					if (entry.isIntersecting) {
-						const skillCards = document.querySelectorAll('.skill-card');
-						skillCards.forEach((card, index) => {
-							setTimeout(() => {
-								card.style.opacity = '1';
-								card.style.transform = 'translateY(0)';
-							}, index * 150);
-						});
+		}
+	</script>
+	<!-- Scripts -->
+	<script>
+		// Skill Animation Trigger
+		// Updated Skill Animation Trigger
+		const skillsObserver = new IntersectionObserver((entries) => {
+			entries.forEach(entry => {
+				if (entry.isIntersecting) {
+					const skillCards = document.querySelectorAll('.skill-card');
+					skillCards.forEach((card, index) => {
+						setTimeout(() => {
+							card.style.opacity = '1';
+							card.style.transform = 'translateY(0)';
+						}, index * 150);
+					});
+				}
+			});
+		}, {
+			threshold: 0.1, // Lower threshold for mobile
+			rootMargin: '0px 0px -50px 0px' // Trigger earlier
+		});
+
+		document.querySelectorAll('.skills-container').forEach(container => {
+			skillsObserver.observe(container);
+		});
+	</script>
+
+	<script>
+		particlesJS("particles-js", {
+			"particles": {
+				"number": {
+					"value": 80,
+					"density": {
+						"enable": true,
+						"value_area": 800
 					}
-				});
-			}, { 
-				threshold: 0.1, // Lower threshold for mobile
-				rootMargin: '0px 0px -50px 0px' // Trigger earlier
-			});
+				},
+				"color": {
+					"value": "#ffffff"
+				},
+				"shape": {
+					"type": "circle",
+					"stroke": {
+						"width": 0,
+						"color": "#000000"
+					},
+					"polygon": {
+						"nb_sides": 5
+					},
+				},
+				"opacity": {
+					"value": 0.5,
+					"random": false,
+					"anim": {
+						"enable": false,
+						"speed": 1,
+						"opacity_min": 0.1,
+						"sync": false
+					}
+				},
+				"size": {
+					"value": 3,
+					"random": true,
+					"anim": {
+						"enable": false,
+						"speed": 40,
+						"size_min": 0.1,
+						"sync": false
+					}
+				},
+				"line_linked": {
+					"enable": true,
+					"distance": 150,
+					"color": "#ffffff",
+					"opacity": 0.4,
+					"width": 1
+				},
+				"move": {
+					"enable": true,
+					"speed": 6,
+					"direction": "none",
+					"random": false,
+					"straight": false,
+					"out_mode": "out",
+					"bounce": false,
+					"attract": {
+						"enable": false,
+						"rotateX": 600,
+						"rotateY": 1200
+					}
+				}
+			},
+			"interactivity": {
+				"detect_on": "canvas",
+				"events": {
+					"onhover": {
+						"enable": true,
+						"mode": "grab"
+					},
+					"onclick": {
+						"enable": true,
+						"mode": "push"
+					},
+					"resize": true
+				},
+				"modes": {
+					"grab": {
+						"distance": 140,
+						"line_linked": {
+							"opacity": 1
+						}
+					},
+					"bubble": {
+						"distance": 400,
+						"size": 40,
+						"duration": 2,
+						"opacity": 8,
+						"speed": 3
+					},
+					"repulse": {
+						"distance": 200,
+						"duration": 0.4
+					},
+					"push": {
+						"particles_nb": 4
+					},
+					"remove": {
+						"particles_nb": 2
+					}
+				}
+			},
+			"retina_detect": true
+		});
+	</script>
 
-			document.querySelectorAll('.skills-container').forEach(container => {
-				skillsObserver.observe(container);
-			});
-		</script>
+</body>
 
-	</body>
 </html>
