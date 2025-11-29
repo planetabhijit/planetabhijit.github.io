@@ -139,7 +139,7 @@
 			/* Updated Skills Section Styles */
 			.skills-container {
 				display: grid;
-				grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+				grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
 				gap: 20px;
 				padding: 20px;
         	}
@@ -415,6 +415,87 @@
 			color: #ecf0f1;
 		}	
 
+		/* --- PROJECTS TRANSPARENCY FIX --- */
+
+/* 1. Ensure the article itself is the semi-transparent card (This looks mostly correct) */
+#portfolio article.item {
+    /* Use a darker, semi-transparent background for the glassmorphism effect */
+    background: rgba(0, 0, 0, 0.2) !important; 
+    border-radius: 10px; 
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* 2. Target the header and the paragraph directly to ensure their backgrounds are transparent */
+#portfolio .item > *,
+#portfolio .item header,
+#portfolio .item p,
+#portfolio .item strong{
+    background: transparent !important;
+	color: #ffffff;
+}
+
+/* 3. The inner image/link elements might have a white background, let's ensure they are transparent too */
+#portfolio .item a.image.fit,
+#portfolio .item strong {
+    background: transparent !important;
+}
+
+		/* --- NEW BACKGROUND STYLES --- */
+
+    /* 1. Apply the gradient to the entire Main Content area */
+    #main {
+        /* Matches the gradient in your screenshot (Muted Purple to Blue-Grey) */
+        background: linear-gradient(135deg, #665261 0%, #768d96 100%);
+        background-attachment: fixed; /* Ensures background stays static while scrolling */
+        background-size: cover;
+        min-height: 100vh;
+    }
+
+    /* 2. Make all sections transparent so the background shows through */
+    #main > section, 
+    #experience, 
+    #skills, 
+    #portfolio, 
+    #certifications, 
+    #achievements, 
+    #education, 
+    #about, 
+    #contact {
+        background: transparent !important;
+        box-shadow: none !important; /* Removes default separation lines/shadows */
+    }
+
+    /* 3. Add a "Glassmorphism" effect to containers for readability */
+    /* This adds a slight transparent box behind your text so it's readable on the gradient */
+    #main .container {
+        background: rgba(255, 255, 255, 0.05); /* Very transparent white */
+        backdrop-filter: blur(10px); /* Blurs the background behind text */
+        -webkit-backdrop-filter: blur(10px); /* Safari support */
+        border-radius: 20px;
+        padding: 40px;
+        margin-bottom: 20px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    /* 4. Ensure text is white to match the dark gradient */
+    #main h2, #main h3, #main p, #main li, #main strong {
+        color: #ffffff !important;
+        text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    }
+    
+    /* 5. Fix specific items that might have white backgrounds */
+    .experience-item, .skill-card {
+        background: rgba(0, 0, 0, 0.2) !important; /* Dark semi-transparent card */
+        backdrop-filter: none;
+        color: white !important;
+    }
+    
+    .skill-name {
+        color: white !important;
+    }
+
 		</style>
 	</head>
 	<body class="is-preload">
@@ -536,7 +617,7 @@
 		
 						<!-- Cloud -->
 						<div class="skill-category cloud">
-							<h3>Cloud & DevOps</h3>
+							<h3>Cloud </h3>
 							<div class="skill-card">
 								<a>
 									<img src="images/aws.jpg" class="skill-image" alt="Java">
@@ -616,7 +697,7 @@
 								<strong><a class="image fit"><img alt="Forex Application" /></a></strong>
 								<header>
 									<h3>Foreign-exchange Application</h3>
-									<p>Real-time forex trading platform using Spring Boot and React.</p>
+									<p>Real-time forex trading app using Spring Boot and React.</p>
 								</header>
 							</article>
 						</div>
